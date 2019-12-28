@@ -6,7 +6,7 @@ renderer.image = function image(href, title, text) {
     console.log(href);
     console.log(title);
     console.log(text);
-    return "<img href=\"" + href +"\"/>"
+    return "<img src=\"" + href +"\" alt=\"alt\"/>"
 };
 
 module.exports = {
