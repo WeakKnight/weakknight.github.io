@@ -4,4 +4,4 @@ I am Tianyu Li, currently a graphics focus graduate student. I will share my exp
 
 This website was designed to be a website with no thirdparty dependency except for Webpack. I implemented every details required by a static blog website. Because it is static, you can not leave a review on web page, I am glad to build contact with you by Email. Feel free to contact me!
 
-![alt](../../assets/pthighssp.png "Cornell Box") 
+![alt](https://github.com/WeakKnight/weakknight.github.io/blob/master/assets/pthighssp.png "Cornell Box") 
