@@ -1,0 +1,35 @@
+{
+  "name": "my-log",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeakKnight/my-log.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeakKnight/my-log/issues"
+  },
+  "homepage": "https://github.com/WeakKnight/my-log#readme",
+  "devDependencies": {
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "html-loader": "^0.5.5",
+    "markdown-loader": "^5.1.0",
+    "marked": "^0.8.0",
+    "marked-images": "^1.3.0"
+  }
+}

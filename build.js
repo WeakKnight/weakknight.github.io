@@ -1,0 +1,1 @@
+// scan src/blogs, then generate catalog.json 

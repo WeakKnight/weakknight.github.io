@@ -1,0 +1,40 @@
+body {
+    background-color: #303030 !important;
+    margin: 0;
+}
+
+div.content {
+    margin-left: 200px;
+    top: 51px;
+    position: fixed;
+    /* padding: 1px 16px; */
+    height: calc(100% - 51px);
+    width: calc(100% - 200px);
+    overflow-x: hidden; 
+    overflow-y: auto; 
+}
+
+div.content.sidebar-off {
+    width: 100%;
+}
+
+.blog>p {
+    color: rgb(212, 212, 212);
+}
+
+.blog>h1 {
+    color: rgb(212, 212, 212);
+}
+
+.blog>h2 {
+    color: rgb(212, 212, 212);
+}
+
+.blog>h3 {
+    color: rgb(212, 212, 212);
+}
+
+.blog {
+    padding: 20px;
+    margin-top: 20px;
+}

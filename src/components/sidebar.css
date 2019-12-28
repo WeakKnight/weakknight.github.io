@@ -1,0 +1,33 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(37, 37, 38);
+    position: fixed;
+    height: calc(100% - 51px);
+    overflow: auto;
+    top: 51px;
+}
+
+.sidebar.sidebar-off{
+    display: none;
+}
+
+.sidebar a {
+    display: block;
+    color: #cccccc;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+}
+
+.sidebar a.active {
+    background-color: rgb(55, 55, 61);
+    color: #cccccc;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: rgb(42, 45, 46);
+    color: #cccccc;
+}
