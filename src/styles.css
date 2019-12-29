@@ -10,8 +10,8 @@ div.content {
     /* padding: 1px 16px; */
     height: calc(100% - 51px);
     width: calc(100% - 200px);
-    overflow-x: hidden; 
-    overflow-y: auto; 
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 div.content.sidebar-off {
@@ -37,4 +37,26 @@ div.content.sidebar-off {
 .blog {
     padding: 20px;
     margin-top: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(30, 30, 30);
+    border-left: 1px solid rgb(66, 66, 66);
+    border-right: 1px solid rgb(66, 66, 66);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(66, 66, 66);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(79, 79, 79);
 }

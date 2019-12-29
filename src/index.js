@@ -57,10 +57,6 @@ let onChange = (previous, current) => {
             .addElement('div')
             .enableClass('blog');
         // .html(mdhtml);
-        BlogHelper.getBlogContent("helloworld.md").then((content) => {
-            console.log("content is" + content);
-            $("blog").html(marked(content));
-        });
     }
 
     // from blogs to other, close sidebar
@@ -70,7 +66,18 @@ let onChange = (previous, current) => {
     }
 };
 
+let sideBar = new SideBar(document.getElementById("side"), [], 0);
 let navBar = new NavBar(document.getElementById("header"), [["Contact", contact], ["Portfolio", portfolio], ["Home", home]], 2);
 
 globalStateMahine.onChange(onChange);
 onChange(STATE_NONE, STATE_HOME);
+
+BlogHelper.getBlogList().then((articles) => {
+    for (let article of articles) {
+        sideBar.addItem(article.title, () => {
+            BlogHelper.getBlogContent(article.path).then((content) => {
+                $("blog").html(marked(content));
+            });
+        });
+    }
+})

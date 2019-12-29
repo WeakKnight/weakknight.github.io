@@ -1,0 +1,12 @@
+{
+    "articles":[
+        {
+            "path":"helloworld.md",
+            "title":"Hello World!"
+        },
+        {
+            "path":"raytracing.md",
+            "title":"My Ray Tracing Adventure"
+        }
+    ]
+}
