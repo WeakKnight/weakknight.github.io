@@ -39,14 +39,14 @@ export default class SideBar {
         })
     }
 
-    addItem(name, callback) {
+    addItem(name, callback, def = false) {
         let a = document.createElement('a');
         this.children.push(a);
 
         a.innerText = name;
         a.href = "#" + name;
         a["index"] = this.children.length;
-        a.onclick = () => {
+        let onclick = () => {
             for (let child of this.children) {
                 $(child).disableClass('active');
             }
@@ -56,11 +56,16 @@ export default class SideBar {
 
             callback();
         };
+        a.onclick = onclick;
 
-        if (index === this.activeIndex) {
+        if (a["index"] === this.activeIndex) {
             a.classList.add('active');
         }
 
         this.parent.appendChild(a);
+
+        if (def) {
+            onclick();
+        }
     }
 }

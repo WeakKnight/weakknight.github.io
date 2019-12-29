@@ -74,10 +74,15 @@ onChange(STATE_NONE, STATE_HOME);
 
 BlogHelper.getBlogList().then((articles) => {
     for (let article of articles) {
+        let isDefault = false;
+        if (article["default"] === true) {
+            isDefault = true;
+        }
         sideBar.addItem(article.title, () => {
             BlogHelper.getBlogContent(article.path).then((content) => {
                 $("blog").html(marked(content));
-            });
+            }, isDefault);
         });
     }
 })
+

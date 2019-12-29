@@ -30,9 +30,13 @@ export default class BlogHelper {
             xhr.open('GET', url);
             // xhr.withCredentials = true;
             xhr.onload = () => {
-                if (status == 200) {
+                console.log("status is" + xhr.status);
+                if (xhr.status == 200) {
                     this.blogSettings = JSON.parse(xhr.responseText);
                     resolve(this.blogSettings.articles);
+                    
+                    console.log("articles is " + xhr.responseText);
+                    console.log("length is " + this.blogSettings.articles.length);
                 }
             };
 

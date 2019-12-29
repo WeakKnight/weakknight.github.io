@@ -1,12 +1,13 @@
 {
-    "articles":[
+    "articles": [
         {
-            "path":"helloworld.md",
-            "title":"Hello World!"
+            "path": "raytracing.md",
+            "title": "My Ray Tracing Adventure"
         },
         {
-            "path":"raytracing.md",
-            "title":"My Ray Tracing Adventure"
+            "path": "helloworld.md",
+            "title": "Hello World!",
+            "default": true
         }
     ]
 }
