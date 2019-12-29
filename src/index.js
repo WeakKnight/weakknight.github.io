@@ -6,11 +6,19 @@ import BlogHelper from './core/bloghelper.js';
 
 import './styles.css';
 
+const marked = require("marked");
+const renderer = new marked.Renderer();
+
+renderer.image = function image(href, title, text) {
+    console.log(href);
+    console.log(title);
+    console.log(text);
+    return "<img src=\"" + href + "\" alt=\"alt\"/>"
+};
+
 // var mdhtml = require("./blogs/helloworld.md");
 // console.log(mdhtml);
-BlogHelper.getBlogContent("helloworld.md").then((content)=>{
-    console.log("content is" + content);
-});
+
 
 const STATE_NONE = -1;
 const STATE_HOME = 0;
@@ -48,7 +56,11 @@ let onChange = (previous, current) => {
         $("content")
             .addElement('div')
             .enableClass('blog');
-           // .html(mdhtml);
+        // .html(mdhtml);
+        BlogHelper.getBlogContent("helloworld.md").then((content) => {
+            console.log("content is" + content);
+            $("blog").html(marked(content));
+        });
     }
 
     // from blogs to other, close sidebar

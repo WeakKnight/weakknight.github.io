@@ -3,7 +3,8 @@ export default class BlogHelper {
     static getBlogContent(relativePath) {
 
         return new Promise((resolve) => {
-            let url = "https://raw.github.com/WeakKnight/weakknight.github.io/master/src/blogs/" + relativePath;
+            let url = "https://raw.githubusercontent.com/WeakKnight/weakknight.github.io/master/src/blogs/" + relativePath;
+            
             let xhr = new XMLHttpRequest();
             xhr.open('GET', url);
             // xhr.withCredentials = true;

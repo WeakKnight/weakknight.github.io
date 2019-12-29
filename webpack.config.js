@@ -1,13 +1,13 @@
 const path = require('path');
-const marked = require("marked");
-const renderer = new marked.Renderer();
+// const marked = require("marked");
+// const renderer = new marked.Renderer();
 
-renderer.image = function image(href, title, text) {
-    console.log(href);
-    console.log(title);
-    console.log(text);
-    return "<img src=\"" + href +"\" alt=\"alt\"/>"
-};
+// renderer.image = function image(href, title, text) {
+//     console.log(href);
+//     console.log(title);
+//     console.log(text);
+//     return "<img src=\"" + href +"\" alt=\"alt\"/>"
+// };
 
 module.exports = {
     entry: './src/index.js',
@@ -25,21 +25,21 @@ module.exports = {
                     'css-loader',
                 ],
             },
-            {
-                test: /\.md$/,
-                use: [
-                    {
-                        loader: "html-loader"
-                    },
-                    {
-                        loader: "markdown-loader",
-                        options: {
-                            pedantic: true,
-                            renderer
-                        }
-                    }
-                ]
-            },
+            // {
+            //     test: /\.md$/,
+            //     use: [
+            //         {
+            //             loader: "html-loader"
+            //         },
+            //         {
+            //             loader: "markdown-loader",
+            //             options: {
+            //                 pedantic: true,
+            //                 renderer
+            //             }
+            //         }
+            //     ]
+            // },
         ],
     },
 };
