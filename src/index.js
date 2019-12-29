@@ -25,6 +25,8 @@ const STATE_HOME = 0;
 const STATE_PORTFOLIO = 1;
 const STATE_CONTACT = 2;
 
+let currentBlogPath = "";
+
 let clearContent = () => {
     $("content").html("");
 }
@@ -51,18 +53,28 @@ let onChange = (previous, current) => {
         // to blogs, open sidebar
         $("topnav").disableClass("sidebar-off");
         $("sidebar").disableClass("sidebar-off");
-        // render blogs
-        //$("content").html(mdhtml);
-        $("content")
-            .addElement('div')
-            .enableClass('blog');
+
         // .html(mdhtml);
+        BlogHelper.getBlogContent(currentBlogPath).then((content) => {
+            $("blog").html(marked(content));
+        });
     }
 
     // from blogs to other, close sidebar
     if (current !== STATE_HOME && previous === STATE_HOME) {
         $("topnav").enableClass("sidebar-off");
         $("sidebar").enableClass("sidebar-off");
+
+        if (current === STATE_CONTACT) {
+            BlogHelper.getBlogContent('contact.md').then((content) => {
+                $("blog").html(marked(content));
+            });
+        }
+        if (current === STATE_PORTFOLIO) {
+            BlogHelper.getBlogContent('portfolio.md').then((content) => {
+                $("blog").html(marked(content));
+            });
+        }
     }
 };
 
@@ -82,6 +94,7 @@ BlogHelper.getBlogList().then((articles) => {
         }
         sideBar.addItem(article.title,
             () => {
+                currentBlogPath = article.path;
                 BlogHelper.getBlogContent(article.path).then((content) => {
                     $("blog").html(marked(content));
                 });
