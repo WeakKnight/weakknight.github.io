@@ -2,11 +2,15 @@ import $ from './core/utils.js';
 import StateMachine from './core/statemachine.js';
 import NavBar from './components/navbar.js';
 import SideBar from './components/sidebar.js';
+import BlogHelper from './core/bloghelper.js';
 
 import './styles.css';
 
-var mdhtml = require("./blogs/helloworld.md");
-console.log(mdhtml);
+// var mdhtml = require("./blogs/helloworld.md");
+// console.log(mdhtml);
+BlogHelper.getBlogContent("helloworld.md").then((content)=>{
+    console.log("content is" + content);
+});
 
 const STATE_NONE = -1;
 const STATE_HOME = 0;
@@ -43,8 +47,8 @@ let onChange = (previous, current) => {
         //$("content").html(mdhtml);
         $("content")
             .addElement('div')
-            .enableClass('blog')
-            .html(mdhtml);
+            .enableClass('blog');
+           // .html(mdhtml);
     }
 
     // from blogs to other, close sidebar
