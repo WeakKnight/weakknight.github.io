@@ -9,12 +9,21 @@ import './styles.css';
 const marked = require("marked");
 const renderer = new marked.Renderer();
 
-renderer.image = function image(href, title, text) {
-    console.log(href);
-    console.log(title);
-    console.log(text);
-    return "<img src=\"" + href + "\" alt=\"alt\"/>"
-};
+function sanitize(str) {
+    return str.replace(/&<"/g, function (m) {
+        if (m === "&") return "&amp;"
+        if (m === "<") return "&lt;"
+        return "&quot;"
+    })
+}
+
+renderer.image = function (src, title, alt) {
+    var exec = /\s=\s*(\d*)\s*x\s*(\d*)\s*$/.exec(src)
+    var res = '<img src="' + sanitize(src) + '" alt="' + sanitize(alt)
+    if (exec && exec[1]) res += '" height="' + exec[1]
+    if (exec && exec[2]) res += '" width="' + exec[2]
+    return res + '">'
+}
 
 // var mdhtml = require("./blogs/helloworld.md");
 // console.log(mdhtml);
@@ -56,7 +65,7 @@ let onChange = (previous, current) => {
 
         // .html(mdhtml);
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
-            $("blog").html(marked(content));
+            $("blog").html(marked(content, { renderer: renderer }));
         });
     }
 
@@ -67,25 +76,25 @@ let onChange = (previous, current) => {
 
         if (current === STATE_CONTACT) {
             BlogHelper.getBlogContent('contact.md').then((content) => {
-                $("blog").html(marked(content));
+                $("blog").html(marked(content, { renderer: renderer }));
             });
         }
         if (current === STATE_PORTFOLIO) {
             BlogHelper.getBlogContent('portfolio.md').then((content) => {
-                $("blog").html(marked(content));
+                $("blog").html(marked(content, { renderer: renderer }));
             });
         }
     }
 };
 
 let sideBar = new SideBar(document.getElementById("side"), [], 0);
-let navBar = new NavBar(document.getElementById("header"), 
-[
-    // ["Contact", contact], 
-    // ["Portfolio", portfolio], 
-    ["Home", home]
-], 
-0);
+let navBar = new NavBar(document.getElementById("header"),
+    [
+        // ["Contact", contact], 
+        // ["Portfolio", portfolio], 
+        ["Home", home]
+    ],
+    0);
 
 globalStateMahine.onChange(onChange);
 onChange(STATE_NONE, STATE_HOME);
@@ -93,25 +102,22 @@ onChange(STATE_NONE, STATE_HOME);
 BlogHelper.getBlogList().then((articles) => {
 
     let hashBlogName = "";
-    if (window.location.hash != "")
-    {
+    if (window.location.hash != "") {
         hashBlogName = decodeURIComponent(window.location.hash);
     }
 
     console.log("hashBlogName Is " + hashBlogName);
-    
+
     for (let article of articles) {
         let isDefault = false;
 
-        if(hashBlogName != "")
-        {
+        if (hashBlogName != "") {
             if (("#" + article.title) == hashBlogName) {
                 console.log("find hashed default");
                 isDefault = true;
             }
         }
-        else
-        {
+        else {
             if (article["default"] === true) {
                 console.log(article["default"]);
                 isDefault = true;
@@ -122,7 +128,7 @@ BlogHelper.getBlogList().then((articles) => {
             () => {
                 currentBlogPath = article.path;
                 BlogHelper.getBlogContent(article.path).then((content) => {
-                    $("blog").html(marked(content));
+                    $("blog").html(marked(content, { renderer: renderer }));
                 });
             },
             isDefault);
