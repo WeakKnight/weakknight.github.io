@@ -34,6 +34,10 @@ div.content.sidebar-off {
     color: rgb(212, 212, 212);
 }
 
+.blog>h4 {
+    color: rgb(212, 212, 212);
+}
+
 .blog {
     padding: 20px;
     margin-top: 20px;

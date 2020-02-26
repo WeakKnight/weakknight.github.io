@@ -79,7 +79,13 @@ let onChange = (previous, current) => {
 };
 
 let sideBar = new SideBar(document.getElementById("side"), [], 0);
-let navBar = new NavBar(document.getElementById("header"), [["Contact", contact], ["Portfolio", portfolio], ["Home", home]], 2);
+let navBar = new NavBar(document.getElementById("header"), 
+[
+    // ["Contact", contact], 
+    // ["Portfolio", portfolio], 
+    ["Home", home]
+], 
+0);
 
 globalStateMahine.onChange(onChange);
 onChange(STATE_NONE, STATE_HOME);
