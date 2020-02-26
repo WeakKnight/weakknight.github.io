@@ -1,8 +1,8 @@
 {
     "articles": [
         {
-            "path": "raytracing.md",
-            "title": "My Ray Tracing Adventure"
+            "path": "realtime-recentwork.md",
+            "title": "My Recent Work On Realtime Rendering"
         },
         {
             "path": "helloworld.md",
