@@ -9,26 +9,6 @@ import './styles.css';
 const marked = require("marked");
 const renderer = new marked.Renderer();
 
-function sanitize(str) {
-    return str.replace(/&<"/g, function (m) {
-        if (m === "&") return "&amp;"
-        if (m === "<") return "&lt;"
-        return "&quot;"
-    })
-}
-
-renderer.image = function (src, title, alt) {
-    var exec = /\s=\s*(\d*)\s*x\s*(\d*)\s*$/.exec(src)
-    var res = '<img src="' + sanitize(src) + '" alt="' + sanitize(alt)
-    if (exec && exec[1]) res += '" height="' + exec[1]
-    if (exec && exec[2]) res += '" width="' + exec[2]
-    return res + '">'
-}
-
-// var mdhtml = require("./blogs/helloworld.md");
-// console.log(mdhtml);
-
-
 const STATE_NONE = -1;
 const STATE_HOME = 0;
 const STATE_PORTFOLIO = 1;

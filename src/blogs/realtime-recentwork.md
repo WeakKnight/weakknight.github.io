@@ -2,7 +2,9 @@
 ### 2020-2-25
 
 Recently, I spent lots of time on developing a realtime renderer, which currently supports deferred rendering, screen space reflection, post processing and is heavily data driven. Blow are some screen shots:
-![alt](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/0/image0.png =964x524 "Editor Overview") 
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/0/image0.png" width="964" height="254" />
+<!-- ![alt](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/0/image0.png =964x524 "Editor Overview")  -->
 ![alt](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/0/image1.png "Deferred-Normal Pass") 
 ![alt](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/0/image2.png "Deferred-Final Result") 
 ![alt](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/0/image3.png "Deferred-Position Pass") 
