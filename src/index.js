@@ -85,13 +85,33 @@ globalStateMahine.onChange(onChange);
 onChange(STATE_NONE, STATE_HOME);
 
 BlogHelper.getBlogList().then((articles) => {
+
+    let hashBlogName = "";
+    if (window.location.hash != "")
+    {
+        hashBlogName = decodeURIComponent(window.location.hash);
+    }
+
+    console.log("hashBlogName Is " + hashBlogName);
+    
     for (let article of articles) {
         let isDefault = false;
 
-        if (article["default"] === true) {
-            console.log(article["default"]);
-            isDefault = true;
+        if(hashBlogName != "")
+        {
+            if (("#" + article.title) == hashBlogName) {
+                console.log("find hashed default");
+                isDefault = true;
+            }
         }
+        else
+        {
+            if (article["default"] === true) {
+                console.log(article["default"]);
+                isDefault = true;
+            }
+        }
+
         sideBar.addItem(article.title,
             () => {
                 currentBlogPath = article.path;
