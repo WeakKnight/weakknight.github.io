@@ -15,6 +15,7 @@ const STATE_PORTFOLIO = 1;
 const STATE_CONTACT = 2;
 
 let currentBlogPath = "";
+let currentBlogTitle = "";
 
 let clearContent = () => {
     $("content").html("");
@@ -58,6 +59,7 @@ let onChange = (previous, current) => {
 
         // .html(mdhtml);
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
+            document.title = currentBlogTitle;
             $("blog").html(marked(content, { renderer: renderer }));
         });
     }
@@ -120,6 +122,9 @@ BlogHelper.getBlogList().then((articles) => {
         sideBar.addItem(article.title,
             () => {
                 currentBlogPath = article.path;
+                currentBlogTitle = article.title + "----Tianyu Li's Blog";
+                document.title = currentBlogTitle;
+                
                 BlogHelper.getBlogContent(article.path).then((content) => {
                     $("blog").html(marked(content, { renderer: renderer }));
                 });
