@@ -33,11 +33,12 @@ div.content.sidebar-off {
 
 #side-close-button
 {
-    position: absolute;
+    display: block;
+    position: fixed;
     width: 30px;
     height: 80px;
     background-color: rgb(55, 55, 56);
-    right: 0px;
+    left: 170px;
     top: 50%;
     opacity: 0.5;
     text-align: center;
@@ -47,20 +48,33 @@ div.content.sidebar-off {
     cursor: pointer;
 }
 
+#side-close-button.sidebar-off
+{
+    display: none;
+    overflow: hidden;
+}
+
+#side-open-button
+{
+    display: none;
+}
+
 #side-open-button.sidebar-off
 {
-    position: absolute;
+    display: block;
+    position: fixed;
     width: 30px;
     height: 80px;
     background-color: rgb(55, 55, 56);
     left: 0px;
-    top: calc(50% + 25px);
+    top: 50%;
     opacity: 0.5;
     text-align: center;
     line-height: 80px;
     font-size: 17px;
     color: #cccccc;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .blog>p {
