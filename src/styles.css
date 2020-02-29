@@ -3,6 +3,12 @@ body {
     margin: 0;
 }
 
+code
+{
+    color: #cccccc;
+    background-color: rgb(52,52,52);
+}
+
 div.content {
     margin-left: 200px;
     margin-right: 30px;
