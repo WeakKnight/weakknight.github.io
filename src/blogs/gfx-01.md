@@ -99,3 +99,6 @@ GFX::Shutdown();
 </code>
 </pre>
 
+### Final Result
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/1/triangles.jpg" width="80%" alt="Final Result"/>
