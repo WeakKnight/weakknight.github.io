@@ -4,5 +4,5 @@ I am Tianyu Li, currently a graphics focus graduate student. I will share my exp
 
 This website was designed to be a website with minimum thirdparty dependency. I implemented every details required by a static blog website. Because of its staticity, you can not leave a review on this web page, I am glad to build further contacts with you by Email. Feel free to contact me!
 
-![alt](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/rtanimation.gif "Animation") 
-![alt](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/pthighssp.png "Cornell Box") 
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/rtanimation.gif" width="100%" alt="Animation"/>
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/pthighssp.png" width="100%" alt="Cornell Box"/>
