@@ -19,9 +19,9 @@ it is just a id wrapper. Actual vulkan objects are handled in object pool. Same 
 
 <pre>
 <code>
-static HandlePool<PipelineResource> s_pipelineHandlePool = HandlePool<PipelineResource>(200);
-static HandlePool<ShaderResource> s_shaderHandlePool = HandlePool<ShaderResource>(200);
-static HandlePool<RenderPassResource> s_renderPassHandlePool = HandlePool<RenderPassResource>(200);
+static HandlePool&lt;PipelineResource&gt; s_pipelineHandlePool = HandlePool&lt;PipelineResource&gt;(200);
+static HandlePool&lt;ShaderResource&gt; s_shaderHandlePool = HandlePool&lt;ShaderResource&gt;(200);
+static HandlePool&lt;RenderPassResource&gt; s_renderPassHandlePool = HandlePool&lt;RenderPassResource&gt;(200);
 </code>
 </pre>
 
