@@ -1,6 +1,10 @@
 {
     "articles": [
         {
+            "path": "gfx-01.md",
+            "title": "Graphics Library Abstraction Layer Devlog 1"
+        },
+        {
             "path": "realtime-recentwork.md",
             "title": "My Recent Work On Realtime Rendering"
         },
