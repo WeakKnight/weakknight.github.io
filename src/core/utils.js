@@ -23,12 +23,17 @@ class HTMLElementWrapper {
         this.element.appendChild(newElement);
         return new HTMLElementWrapper(newElement);
     }
+
+    onClick(func)
+    {
+        this.element.onclick = func;
+    }
 }
 
 export default function $(element) {
     if ((element instanceof String) || (typeof (element) === 'string')) {
         if (element.indexOf('#') !== -1) {
-            let dom = document.getElementById(element);
+            let dom = document.getElementById(element.substr(1));
             return new HTMLElementWrapper(dom);
         } else {
             let dom = document.getElementsByClassName(element)[0];

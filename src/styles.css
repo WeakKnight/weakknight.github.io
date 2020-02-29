@@ -5,17 +5,51 @@ body {
 
 div.content {
     margin-left: 200px;
+    margin-right: 30px;
     top: 51px;
     position: fixed;
     /* padding: 1px 16px; */
     height: calc(100% - 51px);
-    width: calc(100% - 200px);
+    width: calc(100% - 230px);
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 div.content.sidebar-off {
-    width: 100%;
+    width: calc(100% - 60px);
+    margin-left: 30px;
+}
+
+#side-close-button
+{
+    position: absolute;
+    width: 30px;
+    height: 80px;
+    background-color: rgb(55, 55, 56);
+    right: 0px;
+    top: 50%;
+    opacity: 0.5;
+    text-align: center;
+    line-height: 80px;
+    font-size: 17px;
+    color: #cccccc;
+    cursor: pointer;
+}
+
+#side-open-button.sidebar-off
+{
+    position: absolute;
+    width: 30px;
+    height: 80px;
+    background-color: rgb(55, 55, 56);
+    left: 0px;
+    top: calc(50% + 25px);
+    opacity: 0.5;
+    text-align: center;
+    line-height: 80px;
+    font-size: 17px;
+    color: #cccccc;
+    cursor: pointer;
 }
 
 .blog>p {

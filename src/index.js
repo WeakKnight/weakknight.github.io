@@ -18,18 +18,31 @@ let currentBlogPath = "";
 
 let clearContent = () => {
     $("content").html("");
-}
+};
+
+let sideCloseButton = $("#side-close-button");
+let sideOpenButton = $("#side-open-button");
+
+sideCloseButton.onClick((e)=>
+{
+    $("topnav").enableClass("sidebar-off");
+    $("sidebar").enableClass("sidebar-off");
+    $("content").enableClass("sidebar-off");
+    sideOpenButton.enableClass("sidebar-off");
+});
+
+sideOpenButton.onClick((e)=>{
+    $("topnav").disableClass("sidebar-off");
+    $("sidebar").disableClass("sidebar-off");
+    $("content").disableClass("sidebar-off");
+    sideCloseButton.disableClass("sidebar-off");
+    sideOpenButton.disableClass("sidebar-off");
+});
 
 let globalStateMahine = new StateMachine(STATE_HOME);
 
 let home = () => {
     globalStateMahine.changeState(STATE_HOME);
-}
-let portfolio = () => {
-    globalStateMahine.changeState(STATE_PORTFOLIO);
-}
-let contact = () => {
-    globalStateMahine.changeState(STATE_CONTACT);
 }
 
 let onChange = (previous, current) => {
