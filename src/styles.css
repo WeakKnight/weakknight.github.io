@@ -3,10 +3,14 @@ body {
     margin: 0;
 }
 
+pre
+{
+    background-color: rgb(52,52,52);
+}
+
 code
 {
     color: #cccccc;
-    background-color: rgb(52,52,52);
 }
 
 div.content {
