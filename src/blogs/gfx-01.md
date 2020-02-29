@@ -6,12 +6,14 @@ As I recently said, I need migrate to Vulkan eco-system. The most substancial st
 After several days hard working, I finished a triangle example. Inspired by sokol-gfx, I currently imlemented several basic resource concepts.
 
 #### Pipeline
+<pre>
 <code>
 struct Pipeline
 {
     uint32_t id = 0;
 };
 </code>
+</pre>
 
 #### Shader
 
