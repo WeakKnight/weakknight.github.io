@@ -10,9 +10,12 @@ This renderer uses [CSM(cascaded shadow maps)](https://developer.download.nvidia
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csm0.jpg" width="400px" alt="ShadowMap0"/>
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csm1.jpg" width="400px" alt="ShadowMap1"/>
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csm2.jpg" width="400px" alt="ShadowMap2"/>
+
+Different colors correspond to different shadow maps. 
+
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csmsplitcolor.jpg" width="400px" alt="split color"/>
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csmresult.jpg" width="400px" alt="csm result"/>
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csmintro.png" width="400px" alt="csmintro.png"/>
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csmintro.png" width="400px" alt="csmintro"/>
 
 #### G Buffer Pass
 
@@ -26,6 +29,13 @@ All the visible meshes are drawn one-by-one, but instead of shading the scene im
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/irradiancemap.jpg" width="400px" alt="irradiance"/>
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/skybox.jpg" width="400px" alt="skybox"/>
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/gather_result.jpg" width="400px" alt="csm result"/>
+
+##### Contact Shadow
+
+To fully elinimated artifacts caused by shadowmapping bias, in composite pass, this renderer uses screen space ray casting to generate shadow rays for shadow test.
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/contactshadow_off.jpg" width="400px" alt="contact shadow off"/>
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/contactshadow_on.jpg" width="400px" alt="contact shadow on"/>
 
 #### SSR Pass
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/ssr_albedo.jpg" width="400px" alt="csm result"/>
