@@ -5,7 +5,7 @@
 
 #### CSM Shadow Pass
 
-This renderer uses [CSM(cascaded shadow maps)](https://developer.download.nvidia.com/SDK/10.5/opengl/src/cascaded_shadow_maps/doc/cascaded_shadow_maps.pdf) for shadowing. 3 shadow maps are generated into three 2048x2048 textures.
+This renderer uses CSM[(cascaded shadow maps)](https://developer.download.nvidia.com/SDK/10.5/opengl/src/cascaded_shadow_maps/doc/cascaded_shadow_maps.pdf) for shadowing. 3 shadow maps are generated into three 2048x2048 textures.
 
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csm0.jpg" width="400px" alt="ShadowMap0"/>
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/csm1.jpg" width="400px" alt="ShadowMap1"/>
