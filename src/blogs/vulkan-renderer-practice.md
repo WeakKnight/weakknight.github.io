@@ -44,13 +44,25 @@ To fully elinimated artifacts caused by shadowmapping bias, in composite pass, t
 #### SSR Composite Pass
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/ssr_gather_result.jpg" width="400px" alt="csm result"/>
 
-#### Post Processing Pass
-##### Depth Of Field
+##### SSR OFF
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/ssr_off.jpg" width="400px" alt="csm result"/>
+
+##### SSR ON
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/ssr_final_no_dof.jpg" width="400px" alt="csm result"/>
+
+#### Post Processing Pass
+
+##### Depth Of Field OFF
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/ssr_final_no_dof.jpg" width="400px" alt="csm result"/>
+
+##### Depth Of Field ON
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/ssr_final_dof.jpg" width="400px" alt="csm result"/>
 
-##### Dither
+##### Dithering OFF
+
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/no_dither.png" width="800px" alt="csm result"/>
+
+##### Dithering ON
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/cs6610/dither.png" width="800px" alt="csm result"/>
 
 ##### FXAA, Tone Mapping, Gamma Correction and so on...
