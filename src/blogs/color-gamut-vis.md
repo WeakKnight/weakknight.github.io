@@ -27,7 +27,7 @@ plt.show()
 
 
     
-![svg](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_2_0.svg)
+![img](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_2_0.png)
     
 
 
@@ -202,7 +202,7 @@ plt.show()
 
 
     
-![svg](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_6_0.svg)
+![img](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_6_0.png)
     
 
 
@@ -270,7 +270,7 @@ plt.show()
 
 
     
-![svg](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_8_0.svg)
+![img](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_8_0.png)
     
 
 
