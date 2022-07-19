@@ -1,6 +1,10 @@
 {
     "articles": [
         {
+            "path":"sample-elimination.md",
+            "title":"Sample Elimination vs Sample Relaxation"
+        },
+        {
             "path": "color-gamut-vis.md",
             "title": "Plotting CIE-XYZ 1931 Color Gamut"
         },
