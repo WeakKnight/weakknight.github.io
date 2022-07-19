@@ -11,7 +11,7 @@ const renderer = new marked.Renderer();
 
 const STATE_NONE = -1;
 const STATE_HOME = 0;
-const STATE_PORTFOLIO = 1;
+const STATE_PUBLICATIONS = 1;
 const STATE_CONTACT = 2;
 
 let currentBlogPath = "";
@@ -46,11 +46,14 @@ let home = () => {
     globalStateMahine.changeState(STATE_HOME);
 }
 
+let publications = () => {
+    globalStateMahine.changeState(STATE_PUBLICATIONS);
+}
+
 let onChange = (previous, current) => {
     if (previous !== current) {
         clearContent();
     }
-
 
     if (current === STATE_HOME && previous !== STATE_HOME) {
         // to blogs, open sidebar
@@ -63,7 +66,6 @@ let onChange = (previous, current) => {
             $("blog").html(marked(content, { renderer: renderer }));
         });
     }
-
     // from blogs to other, close sidebar
     if (current !== STATE_HOME && previous === STATE_HOME) {
         $("topnav").enableClass("sidebar-off");
@@ -74,8 +76,8 @@ let onChange = (previous, current) => {
                 $("blog").html(marked(content, { renderer: renderer }));
             });
         }
-        if (current === STATE_PORTFOLIO) {
-            BlogHelper.getBlogContent('portfolio.md').then((content) => {
+        if (current === STATE_PUBLICATIONS) {
+            BlogHelper.getBlogContent('publications.md').then((content) => {
                 $("blog").html(marked(content, { renderer: renderer }));
             });
         }
@@ -86,10 +88,11 @@ let sideBar = new SideBar(document.getElementById("side"), [], 0);
 let navBar = new NavBar(document.getElementById("header"),
     [
         // ["Contact", contact], 
-        // ["Portfolio", portfolio], 
+        // ["Portfolio", portfolio],
+        ["Publications", publications],
         ["Home", home]
     ],
-    0);
+    1);
 
 globalStateMahine.onChange(onChange);
 onChange(STATE_NONE, STATE_HOME);
