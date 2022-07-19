@@ -74,7 +74,6 @@ let onChange = (previous, current) => {
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
             document.title = currentBlogTitle;
             $("blog").html(marked(content, { renderer: renderer }));
-            hljs.highlightAll();
         });
     }
     else if (current !== STATE_HOME) {
@@ -84,13 +83,11 @@ let onChange = (previous, current) => {
         if (current === STATE_RESUME) {
             BlogHelper.getBlogContent('resume.md').then((content) => {
                 $("blog").html(marked(content, { renderer: renderer }));
-                hljs.highlightAll();
             });
         }
         else if (current === STATE_PUBLICATIONS) {
             BlogHelper.getBlogContent('publications.md').then((content) => {
                 $("blog").html(marked(content, { renderer: renderer }));
-                hljs.highlightAll();
             });
         }
     }
@@ -157,7 +154,6 @@ BlogHelper.getBlogList().then((articles) => {
                 
                 BlogHelper.getBlogContent(article.path).then((content) => {
                     $("blog").html(marked(content, { renderer: renderer }));
-                    hljs.highlightAll();
                 });
             },
             isDefault);
