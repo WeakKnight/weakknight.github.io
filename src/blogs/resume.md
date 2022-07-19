@@ -61,10 +61,10 @@ Technical Experience
 
 **Personal Projects:**   
 
->*Uber Moves*, a visualization tool for Uber pickups
-links: [Interactive Demo](https://ubermoves.github.io/UberMoves/app.html)
+>*Uber Moves*, a visualization tool for Uber pickups. <br/>
+> links: [Interactive Demo](https://ubermoves.github.io/UberMoves/app.html)
 
->*Path Tracer*, a unidirectional path tracer with multiple importance sampling support and pbr based material
+>*Path Tracer*, a unidirectional path tracer with multiple importance sampling support and pbr based material. <br/>
 >links: [Project Page](https://www.cs.utah.edu/~tianyuli/courses/cs6620/prj14.html)
 
 **Programming Languages:**   
