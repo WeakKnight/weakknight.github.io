@@ -3,7 +3,7 @@
         {
             "path": "color-gamut-vis.md",
             "titie": "Plotting CIE-XYZ 1931 Color Gamut"
-        }
+        },
         {
             "path": "vulkan-renderer-practice.md",
             "title": "A Vulkan Practice"
