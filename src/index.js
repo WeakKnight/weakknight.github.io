@@ -124,7 +124,7 @@ BlogHelper.getBlogList().then((articles) => {
                 isDefault = true;
             }
         }
-        else if (!isDefault) {
+        if (!isDefault) {
             if (article["default"] === true) {
                 console.log(article["default"]);
                 isDefault = true;
