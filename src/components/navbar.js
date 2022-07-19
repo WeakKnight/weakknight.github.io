@@ -12,6 +12,13 @@ export default class NavBar {
 
         this.parent.appendChild(this.container);
 
+        let title = document.createElement('a');
+        title.innerText = "Tianyu's Blog";
+        title.style.float = "left";
+        title.style.fontWeight = "bold"
+        title.href = "https://weakknight.github.io/";
+        this.container.appendChild(title);
+
         this.children = [];
 
         this.items = items;
