@@ -9,7 +9,7 @@ import './highlight.css';
 
 const marked = require("marked");
 marked.setOptions({
-    highlight: function(code, lang) {
+    highlight: function (code, lang) {
         const language = hljs.getLanguage(lang) ? lang : 'plaintext';
         return hljs.highlight(code, { language }).value;
     },
@@ -33,15 +33,14 @@ let clearContent = () => {
 let sideCloseButton = $("#side-close-button");
 let sideOpenButton = $("#side-open-button");
 
-sideCloseButton.onClick((e)=>
-{
+sideCloseButton.onClick((e) => {
     $("topnav").enableClass("sidebar-off");
     $("sidebar").enableClass("sidebar-off");
     $("content").enableClass("sidebar-off");
     sideOpenButton.enableClass("sidebar-off");
 });
 
-sideOpenButton.onClick((e)=>{
+sideOpenButton.onClick((e) => {
     $("topnav").disableClass("sidebar-off");
     $("sidebar").disableClass("sidebar-off");
     $("content").disableClass("sidebar-off");
@@ -64,9 +63,7 @@ let resume = () => {
 }
 
 let onChange = (previous, current) => {
-    if (previous !== current) {
-        clearContent();
-    }
+    clearContent();
 
     if (current === STATE_HOME) {
         $("topnav").disableClass("sidebar-off");
@@ -78,7 +75,7 @@ let onChange = (previous, current) => {
             $("blog").html(marked(content, { renderer: renderer }));
         });
     }
-    else if (current !== STATE_HOME) {
+    else {
         $("topnav").enableClass("sidebar-off");
         $("sidebar").enableClass("sidebar-off");
         $("content").enableClass("noSideBar");
@@ -133,37 +130,33 @@ BlogHelper.getBlogList().then((articles) => {
                 isDefault = true;
             }
         }
-        
+
         sideBar.addItem(article.title,
             () => {
                 currentBlogPath = article.path;
                 currentBlogTitle = article.title + "----Tianyu Li's Blog";
                 document.title = currentBlogTitle;
-                
+
                 BlogHelper.getBlogContent(article.path).then((content) => {
                     $("blog").html(marked(content, { renderer: renderer }));
                 });
             },
             isDefault);
 
-        if (window.location.hash !== "#Publications" && window.location.hash !== "#Resum%C3%A9" && isDefault)
-        {
+        if (window.location.hash !== "#Publications" && window.location.hash !== "#Resum%C3%A9" && isDefault) {
             currentBlogPath = article.path;
             currentBlogTitle = article.title + "----Tianyu Li's Blog";
             document.title = currentBlogTitle;
         }
     }
 
-    if (window.location.hash === "#Publications")
-    {
+    if (window.location.hash === "#Publications") {
         navBar.setSelectionByIndex(1);
     }
-    else if (window.location.hash === "#Resum%C3%A9")
-    {
+    else if (window.location.hash === "#Resum%C3%A9") {
         navBar.setSelectionByIndex(0);
     }
-    else
-    {
+    else {
         navBar.setSelectionByIndex(2);
     }
 })
