@@ -26,8 +26,7 @@ plt.show()
 ```
 
 
-    
-![img](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_2_0.png)
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_2_0.png" width="60%"/>
     
 
 
@@ -64,8 +63,7 @@ plt.show()
 ```
 
 
-    
-![svg](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_3_0.svg)
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_3_0.svg" width="60%"/>
     
 
 
@@ -104,8 +102,7 @@ plt.show()
 ```
 
 
-    
-![svg](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_4_0.svg)
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_4_0.svg" width="60%"/>
     
 
 
@@ -156,8 +153,7 @@ plt.show()
 ```
 
 
-    
-![svg](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_5_0.svg)
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_5_0.svg" width="60%"/>
     
 
 
@@ -201,8 +197,7 @@ plt.show()
 ```
 
 
-    
-![img](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_6_0.png)
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_6_0.png" width="60%"/>
     
 
 
@@ -269,8 +264,7 @@ plt.show()
 ```
 
 
-    
-![img](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_8_0.png)
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_8_0.png" width="60%"/>
     
 
 
@@ -374,7 +368,6 @@ plt.show()
 ```
 
 
-    
-![svg](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_10_0.svg)
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_10_0.svg" width="60%"/>
     
 
