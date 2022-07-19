@@ -25,6 +25,11 @@ a
     color: rgb(55, 148,255);
 }
 
+h5
+{
+    color: #cccccc;
+}
+
 div.content {
     margin-left: 200px;
     margin-right: 30px;
