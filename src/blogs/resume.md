@@ -6,8 +6,11 @@ ltyucb@gmail.com
 
 +86-188-1068-8920
 
-Education
-======
+------
+
+## Education
+
+
 > 2021-Now
 :   **Graphics Engineer**; TiMi Studio, Tencent Games
 
@@ -16,10 +19,9 @@ Education
 
 > 2011-2015
 :   **Bachelor of Engineering, Computer Software Engineering**; Beihang University
+------
 
-
-Publication
-======
+## Publication
 > **Virtual Blue Noise Lighting**<br/>
 > Tianyu Li*, Wenyou Wang*, Daqi Lin, Cem Yuksel (*Joint first authors) <br/>
 > Proceedings of ACM on Computer Graphics and Interactive Techniques (Proceedings of HPG 2022) <br/>
@@ -29,8 +31,7 @@ Publication
 > Proceedings of High-Performance Graphics Research Posters, 2021
 ------
 
-Work Experience
-======
+## Work Experience
 **Graphics Engineer:**
 
 > Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) for TiMi-L1.
@@ -55,9 +56,8 @@ including most traditional combat mechanics and platformer machanics. <br/>
 > Developped a React UI library for our game engine's UI editor, including dropdown list, button group, anchor editor, color picker, numer input box, text input box and so on. Other teammates developped more complex editors based on my UI library. <br/>
 > During this project, I gained a lot of experience about how to design a UI component library with ease of use. <br/>
 > links: [Product Page](https://www.egret.com/en/products/wing.html)
-
-Technical Experience
-======
+------
+## Technical Experience
 
 **Personal Projects:**   
 
@@ -72,9 +72,9 @@ Technical Experience
 >*C++*:  usually use C++ as C with class, not familiar with Modrn C++.
 
 >*Javascript*:  React development for client app based on electron.
+------
+## Extra
 
-Extra
-======
 
 > Spoken Languages: Chinese (native speaker), English
 
@@ -87,4 +87,4 @@ Extra
 <br/>
 <br/>
 
----
+------
