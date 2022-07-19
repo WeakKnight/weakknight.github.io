@@ -54,15 +54,13 @@ utils.displayVecArray(outputSamples)
 ```
 
 
-    
-![png](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_0.png)
-    
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_0.png" width="60%"/> 
 
 
 
     
-![png](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_1.png)
-    
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_1.png" width="60%"/> 
 
 
 Sample Relaxation
@@ -105,12 +103,10 @@ utils.displayVecArray(outputSamples)
 
 
     
-![png](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_0.png)
-    
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_0.png" width="60%"/> 
 
 
 
     
-![png](https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_1.png)
-    
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_1.png" width="60%"/>
 
