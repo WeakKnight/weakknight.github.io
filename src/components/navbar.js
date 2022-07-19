@@ -48,4 +48,18 @@ export default class NavBar {
             this.container.appendChild(a);
         })
     }
+
+    setSelectionByIndex(targetIndex) {
+        for (let child of this.children) {
+            $(child).disableClass('active');
+        }
+        this.items.forEach((item, index) => {
+            let a = this.children[index];
+            if (index === targetIndex){
+                this.activeIndex = index;
+                $(a).enableClass('active');
+                item[1]();
+            }
+        })
+    }
 }
