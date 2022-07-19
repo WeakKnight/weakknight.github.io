@@ -1,5 +1,5 @@
 body {
-    background-color: #303030 !important;
+    background-color: #1e1e1e !important;
     margin: 0;
     overflow: hidden;
 }
@@ -28,10 +28,11 @@ a
 div.content {
     margin-left: 200px;
     margin-right: 30px;
-    top: 51px;
+    margin-top: 15px;
+    top: 48px;
     position: fixed;
     /* padding: 1px 16px; */
-    height: calc(100% - 51px);
+    height: calc(100% - 48px);
     width: calc(100% - 230px);
     overflow-x: hidden;
     overflow-y: auto;

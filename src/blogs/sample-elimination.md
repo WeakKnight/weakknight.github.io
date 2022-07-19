@@ -1,4 +1,4 @@
-Sample Elimination
+## Sample Elimination
 
 
 ```python
@@ -55,12 +55,12 @@ utils.displayVecArray(outputSamples)
 
 
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_0.png" width="60%"/> 
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_0.png" width="45%"/> 
 
 
 
     
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_1.png" width="60%"/> 
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_1_1.png" width="45%"/> 
 
 
 Sample Relaxation
@@ -103,10 +103,10 @@ utils.displayVecArray(outputSamples)
 
 
     
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_0.png" width="60%"/> 
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_0.png" width="45%"/> 
 
 
 
     
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_1.png" width="60%"/>
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/sample_elimination/output_3_1.png" width="45%"/>
 
