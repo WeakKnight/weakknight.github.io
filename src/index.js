@@ -59,19 +59,16 @@ let onChange = (previous, current) => {
         clearContent();
     }
 
-    if (current === STATE_HOME && previous !== STATE_HOME) {
-        // to blogs, open sidebar
+    if (current === STATE_HOME) {
         $("topnav").disableClass("sidebar-off");
         $("sidebar").disableClass("sidebar-off");
 
-        // .html(mdhtml);
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
             document.title = currentBlogTitle;
             $("blog").html(marked(content, { renderer: renderer }));
         });
     }
-    // from blogs to other, close sidebar
-    if (current !== STATE_HOME) {
+    else if (current !== STATE_HOME) {
         $("topnav").enableClass("sidebar-off");
         $("sidebar").enableClass("sidebar-off");
 
@@ -80,7 +77,7 @@ let onChange = (previous, current) => {
                 $("blog").html(marked(content, { renderer: renderer }));
             });
         }
-        if (current === STATE_PUBLICATIONS) {
+        else if (current === STATE_PUBLICATIONS) {
             BlogHelper.getBlogContent('publications.md').then((content) => {
                 $("blog").html(marked(content, { renderer: renderer }));
             });
