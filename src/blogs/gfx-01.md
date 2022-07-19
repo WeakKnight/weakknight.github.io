@@ -6,24 +6,20 @@ As I recently said, I need migrate to Vulkan eco-system. The most substancial st
 After several days hard working, I finished a triangle example. Inspired by sokol-gfx, I currently imlemented basic lifecycles and several resource concepts.
 
 ### Resources
-<pre>
-<code>
+```cpp
 struct Pipeline
 {
     uint32_t id = 0;
 };
-</code>
-</pre>
+```
 
 it is just a id wrapper. Actual vulkan objects are handled in object pool. Same for other resource types.
 
-<pre>
-<code>
+```cpp
 static HandlePool&lt;PipelineResource&gt; s_pipelineHandlePool = HandlePool&lt;PipelineResource&gt;(200);
 static HandlePool&lt;ShaderResource&gt; s_shaderHandlePool = HandlePool&lt;ShaderResource&gt;(200);
 static HandlePool&lt;RenderPassResource&gt; s_renderPassHandlePool = HandlePool&lt;RenderPassResource&gt;(200);
-</code>
-</pre>
+```
 
 Every pool has a preset capacity but can grow.
 
@@ -33,20 +29,17 @@ The first principle is the ease of use, so I try to make the API as easy as poss
 
 #### Initializition
 
-<pre>
-<code>
+```cpp
 GFX::InitialDescription initDesc = {};
 initDesc.debugMode = true;
 initDesc.window = m_window;
 
 GFX::Init(initDesc);
-</code>
-</pre>
+```
 
 #### Resource Creation
 
-<pre>
-<code>
+```cpp
 GFX::ShaderDescription vertDesc = {};
 vertDesc.name = "default";
 vertDesc.codes = StringUtils::ReadFile("default.vert");
@@ -65,13 +58,11 @@ pipelineDesc.primitiveTopology = GFX::PrimitiveTopology::TriangleList;
 pipelineDesc.shaders.push_back(vertShader);
 pipelineDesc.shaders.push_back(fragShader);
 pipeline = GFX::CreatePipeline(pipelineDesc);
-</code>
-</pre>
+```
 
 #### Render Loop
 
-<pre>
-<code>
+```cpp
 GFX::BeginFrame();
 		
 GFX::BeginDefaultRenderPass();
@@ -83,21 +74,18 @@ GFX::Draw(3, 1, 0, 0);
 GFX::EndRenderPass();
 
 GFX::EndFrame();
-</code>
-</pre>
+```
 
 #### Terminate
 
-<pre>
-<code>
+```cpp
 GFX::DestroyPipeline(pipeline);
 
 GFX::DestroyShader(vertShader);
 GFX::DestroyShader(fragShader);
 
 GFX::Shutdown();
-</code>
-</pre>
+```
 
 ### Final Result
 
