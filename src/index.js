@@ -5,6 +5,7 @@ import SideBar from './components/sidebar.js';
 import BlogHelper from './core/bloghelper.js';
 
 import './styles.css';
+import './highlight.css';
 
 const marked = require("marked");
 marked.setOptions({
@@ -70,6 +71,7 @@ let onChange = (previous, current) => {
     if (current === STATE_HOME) {
         $("topnav").disableClass("sidebar-off");
         $("sidebar").disableClass("sidebar-off");
+        $("content").disableClass("noSideBar");
 
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
             document.title = currentBlogTitle;
@@ -79,6 +81,7 @@ let onChange = (previous, current) => {
     else if (current !== STATE_HOME) {
         $("topnav").enableClass("sidebar-off");
         $("sidebar").enableClass("sidebar-off");
+        $("content").enableClass("noSideBar");
 
         if (current === STATE_RESUME) {
             BlogHelper.getBlogContent('resume.md').then((content) => {

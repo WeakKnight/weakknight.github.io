@@ -6,7 +6,7 @@ body {
 
 pre
 {
-    background-color: rgb(52,52,52);
+    background-color: rgb(30,30,30);
     overflow: auto;
 }
 
@@ -114,7 +114,12 @@ div.content.sidebar-off {
 
 .blog {
     padding: 20px;
-    margin-top: 20px;
+    background-color: rgb(30,30,30);
+}
+
+div.content.noSideBar{
+    width: 100%;
+    margin-left: 0px;
 }
 
 /* width */
