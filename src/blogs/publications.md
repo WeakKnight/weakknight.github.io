@@ -1,5 +1,5 @@
 > **Virtual Blue Noise Lighting**<br/>
-> Tianyu Li*, Wenyou Wang*, Daqi Lin, Cem Yuksel (*Joint first authors) <br/>
+> Tianyu Li\*, Wenyou Wang\*, Daqi Lin, Cem Yuksel (\*Joint first authors) <br/>
 > Proceedings of ACM on Computer Graphics and Interactive Techniques (Proceedings of HPG 2022) <br/>
 > [Project Page](https://graphics.cs.utah.edu/research/projects/virtual-blue-noise-lighting/) <br/>
 > *Wolfgang Straßer Best Paper Award, 3nd place <br/>

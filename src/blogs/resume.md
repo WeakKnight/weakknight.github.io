@@ -23,7 +23,7 @@ ltyucb@gmail.com
 
 ## Publication
 > **Virtual Blue Noise Lighting**<br/>
-> Tianyu Li*, Wenyou Wang*, Daqi Lin, Cem Yuksel (*Joint first authors) <br/>
+> Tianyu Li\*, Wenyou Wang\*, Daqi Lin, Cem Yuksel (\*Joint first authors) <br/>
 > Proceedings of ACM on Computer Graphics and Interactive Techniques (Proceedings of HPG 2022) <br/>
 
 > **Virtual Lights with Blue Noise Distribution** <br/>
