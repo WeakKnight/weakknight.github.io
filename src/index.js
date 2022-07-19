@@ -108,21 +108,6 @@ let navBar = new NavBar(document.getElementById("header"),
     navBarItems.length - 1);
 
 globalStateMahine.onChange(onChange);
-if (window.location.hash === "#Publications")
-{
-    navBar.setSelectionByIndex(1);
-    // onChange(STATE_NONE, STATE_PUBLICATIONS);
-}
-else if (window.location.hash === "#Resum%C3%A9")
-{
-    navBar.setSelectionByIndex(0);
-    // onChange(STATE_NONE, STATE_RESUME);
-}
-else
-{
-    navBar.setSelectionByIndex(2);
-    // onChange(STATE_NONE, STATE_HOME);
-}
 
 BlogHelper.getBlogList().then((articles) => {
 
@@ -142,13 +127,13 @@ BlogHelper.getBlogList().then((articles) => {
                 isDefault = true;
             }
         }
-        else {
+        else if (!isDefault) {
             if (article["default"] === true) {
                 console.log(article["default"]);
                 isDefault = true;
             }
         }
-
+        
         sideBar.addItem(article.title,
             () => {
                 currentBlogPath = article.path;
@@ -160,6 +145,26 @@ BlogHelper.getBlogList().then((articles) => {
                 });
             },
             isDefault);
+
+        if (window.location.hash !== "#Publications" && window.location.hash !== "#Resum%C3%A9" && isDefault)
+        {
+            currentBlogPath = article.path;
+            currentBlogTitle = article.title + "----Tianyu Li's Blog";
+            document.title = currentBlogTitle;
+        }
+    }
+
+    if (window.location.hash === "#Publications")
+    {
+        navBar.setSelectionByIndex(1);
+    }
+    else if (window.location.hash === "#Resum%C3%A9")
+    {
+        navBar.setSelectionByIndex(0);
+    }
+    else
+    {
+        navBar.setSelectionByIndex(2);
     }
 })
 

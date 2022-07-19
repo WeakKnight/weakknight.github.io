@@ -13,7 +13,7 @@ struct Pipeline
 };
 ```
 
-it is just a id wrapper. Actual vulkan objects are handled in object pool. Same for other resource types.
+it is just an id wrapper. Actual vulkan objects are handled in object pool. Same for other resource types.
 
 ```cpp
 static HandlePool&lt;PipelineResource&gt; s_pipelineHandlePool = HandlePool&lt;PipelineResource&gt;(200);
