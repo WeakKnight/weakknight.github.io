@@ -7,6 +7,14 @@ import BlogHelper from './core/bloghelper.js';
 import './styles.css';
 
 const marked = require("marked");
+marked.setOptions({
+    highlight: function(code, lang) {
+        const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+        return hljs.highlight(code, { language }).value;
+    },
+    langPrefix: 'hljs language-',
+});
+
 const renderer = new marked.Renderer();
 
 const STATE_NONE = -1;
