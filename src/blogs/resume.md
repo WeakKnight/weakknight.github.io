@@ -44,7 +44,7 @@ ltyucb@gmail.com
 >*Uber Moves*, a visualization tool for Uber pickups. <br/>
 > links: [Interactive Demo](https://ubermoves.github.io/UberMoves/app.html)
 
->*Path Tracer*, an unidirectional path tracer with multiple importance sampling support and pbr based material. <br/>
+>*Path Tracer*, an unidirectional path tracer. <br/>
 >links: [Project Page](https://www.cs.utah.edu/~tianyuli/courses/cs6620/prj14.html)
 
 **Programming Languages:**   
