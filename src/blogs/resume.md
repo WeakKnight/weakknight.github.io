@@ -10,10 +10,6 @@ ltyucb@gmail.com
 
 ## Education
 
-
-> 2021-Now
-:   **Graphics Engineer**; TiMi Studio, Tencent Games
-
 > 2019-2021
 :   **Master of Computing, Computer Graphics**; University of Utah
 
@@ -32,12 +28,13 @@ ltyucb@gmail.com
 ------
 
 ## Work Experience
-**Graphics Engineer:**
-
+> 2021-Now
+: **Graphics Engineer**, TiMi Studio, Tencent Games
+<br/>
 > Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) in TiMi-L1.
-
+<br/>
 > Developped rendering features about HDR Display.
-
+<br/>
 > Developped Yarp, the in-house rendering pipeline in TiMi-L1.
 ------
 ## Technical Experience
@@ -47,7 +44,7 @@ ltyucb@gmail.com
 >*Uber Moves*, a visualization tool for Uber pickups. <br/>
 > links: [Interactive Demo](https://ubermoves.github.io/UberMoves/app.html)
 
->*Path Tracer*, a unidirectional path tracer with multiple importance sampling support and pbr based material. <br/>
+>*Path Tracer*, an unidirectional path tracer with multiple importance sampling support and pbr based material. <br/>
 >links: [Project Page](https://www.cs.utah.edu/~tianyuli/courses/cs6620/prj14.html)
 
 **Programming Languages:**   
