@@ -34,28 +34,11 @@ ltyucb@gmail.com
 ## Work Experience
 **Graphics Engineer:**
 
-> Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) for TiMi-L1.
+> Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) in TiMi-L1.
 
 > Developped rendering features about HDR Display.
 
-> Developped Yarp, the in-house rendering pipeline for TiMi-L1.
-
-**Tool And Gameplay Programmer:**
-
-> Developped most gameplay of an action platformer game,
-including most traditional combat mechanics and platformer machanics. <br/>
-
-> Developped a WYSIWYG level editor. Let user design and test levels instantly. Inspired by unity, I developed a property decorator system to make a custom editor very quicky for fast iterating. <br/>
-> links: Watch Demo Video with [link](https://www.youtube.com/watch?v=SFRh1tTEbac).
-
-**Tool And Gameplay Programmer**
-
-> Developped a C++ runtime for low-end iOS and android device. At that time, most mobile phone in China didn't support WebGL. We provided a lightweight js binding wrapper(Javascript Core and V8) over OpenGL ES. When devices run game based on egret game engine, the broswer will use our runtime to run this game. What's more, we provided more access to Camera and Mic by more APIs. <br/>
-> links: [Product Page](https://www.egret.com/en/native.html)
-
-> Developped a React UI library for our game engine's UI editor, including dropdown list, button group, anchor editor, color picker, numer input box, text input box and so on. Other teammates developped more complex editors based on my UI library. <br/>
-> During this project, I gained a lot of experience about how to design a UI component library with ease of use. <br/>
-> links: [Product Page](https://www.egret.com/en/products/wing.html)
+> Developped Yarp, the in-house rendering pipeline in TiMi-L1.
 ------
 ## Technical Experience
 
@@ -69,7 +52,7 @@ including most traditional combat mechanics and platformer machanics. <br/>
 
 **Programming Languages:**   
 
->*C++*:  usually use C++ as C with class, not familiar with Modrn C++.
+>*C++*:  usually use C++ as C with class.
 
 >*Javascript*:  React development for client app based on electron.
 ------

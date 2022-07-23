@@ -4,9 +4,9 @@
     width: 200px;
     background-color: rgb(37, 37, 38);
     position: fixed;
-    height: calc(100% - 51px);
+    height: calc(100% - 48px);
     overflow: auto;
-    top: 51px;
+    top: 48px;
 }
 
 .sidebar.sidebar-off{
