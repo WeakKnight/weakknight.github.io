@@ -59,7 +59,7 @@ function renderMathsExpression(expr) {
     }
 }
 
-marked.setOptions({renderer: renderer});
+marked.setOptions({ renderer: renderer });
 
 const STATE_NONE = -1;
 const STATE_HOME = 0;
@@ -167,7 +167,7 @@ BlogHelper.getBlogList().then((articles) => {
                 isDefault = true;
             }
         }
-        if (!isDefault) {
+        else if (!isDefault) {
             if (article["default"] === true) {
                 console.log(article["default"]);
                 isDefault = true;
