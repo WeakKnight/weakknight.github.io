@@ -6,3 +6,5 @@ Simply, we can express a quantity by the expected value of a random variable $Y$
 
 ### Strong law of large numbers
 > $\mathbb{P}(\lim_{n\to\infty} |\hat{\mu}_n-\mu| = 0) = 1$
+
+While strong law tell us that Monte Carlo will eventually produce an error as small as we like, it does not tell us how large n has to be for this to happen. It also does not say for a given sample $Y_1, ..., Y_n$ whether the error is likely to be small.
