@@ -1,6 +1,10 @@
 {
     "articles": [
         {
+            "path":"monte-carlo-note-01.md",
+            "title":"Monte Carlo Notes 1"
+        },
+        {
             "path":"sample-elimination.md",
             "title":"Sample Elimination vs Sample Relaxation"
         },
