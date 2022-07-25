@@ -2,6 +2,7 @@
 
 ### Color Matching Function
 
+$ax^2 + bx + c = 0$
 
 ```python
 %matplotlib inline
