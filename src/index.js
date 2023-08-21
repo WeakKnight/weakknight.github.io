@@ -7,7 +7,7 @@ import BlogHelper from './core/bloghelper.js';
 import './styles.css';
 import './highlight.css';
 
-const marked = require("marked");
+const { marked } = require("marked");
 marked.setOptions({
     highlight: function (code, lang) {
         const language = hljs.getLanguage(lang) ? lang : 'plaintext';
@@ -115,7 +115,11 @@ let onChange = (previous, current) => {
 
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
             document.title = currentBlogTitle;
-            $("blog").html(marked(content, { renderer: renderer }));
+            try {
+                $("blog").html(marked(content, { renderer: renderer }));
+            } catch (error) {
+                console.log(error);
+            }
         });
     }
     else {
@@ -181,7 +185,12 @@ BlogHelper.getBlogList().then((articles) => {
                 document.title = currentBlogTitle;
 
                 BlogHelper.getBlogContent(article.path).then((content) => {
-                    $("blog").html(marked(content, { renderer: renderer }));
+                    try {
+                        $("blog").html(marked(content, { renderer: renderer }));
+                    }
+                    catch (error) {
+                        console.log(error);
+                    }
                 });
             },
             isDefault);
