@@ -23,3 +23,7 @@ Suppose that $Var(Y) = \sigma^2 < \infty$, the variance of $\hat{\mu}_n$ is
 > $\mathbb{E}((\hat{\mu}_n - \mu)^2) = \frac{\sigma^2}{n}$
 
 ---
+
+### Unbiased Estimator
+
+> $\mathbb{E}(\hat{\mu}_n) = \mu$ 
