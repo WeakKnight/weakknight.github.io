@@ -6,7 +6,7 @@ Simply, we can express a quantity by the expected value of a random variable $Y$
 
 $$
 \hat{\mu}_n = \frac{1}{n}\sum_{n=1}^{n} Y_i 
-$$
+$$ (1.1)
 
 ---
 
