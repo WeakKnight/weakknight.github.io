@@ -1,4 +1,4 @@
-## Monte Carlo Notes 1
+## Accuracy of simple Monte Carlo
 
 ### Simple Monte Carlo
 

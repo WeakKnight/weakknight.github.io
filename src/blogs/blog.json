@@ -1,8 +1,8 @@
 {
     "articles": [
         {
-            "path":"monte-carlo-note-01.md",
-            "title":"Monte Carlo Notes 1"
+            "path":"accuracy-of-simple-monte-carlo.md",
+            "title":"Accuracy of simple Monte Carlo"
         },
         {
             "path":"sample-elimination.md",
