@@ -18,7 +18,7 @@ While strong law tell us that Monte Carlo will eventually produce an error as sm
 
 ### Unbiased Estimator
 
-> $\tag{1.3} \mathbb{E}(\hat{\mu}_n) = \mu$ 
+> $\mathbb{E}(\hat{\mu}_n) = \mu$ (1.3)
 
 ---
 
@@ -26,13 +26,13 @@ While strong law tell us that Monte Carlo will eventually produce an error as sm
 
 Suppose that $Var(Y) = \sigma^2 < \infty$, the variance of $\hat{\mu}_n$ is
 
-> $\tag{1.4} \mathbb{E}((\hat{\mu}_n - \mu)^2) = \frac{\sigma^2}{n}$
+> $\mathbb{E}((\hat{\mu}_n - \mu)^2) = \frac{\sigma^2}{n}$ (1.4)
 
 ---
 
 ### Root Mean Squared Error(RMSE)
 
-> $\tag{1.5} RMSE = \sqrt{\mathbb{E}((\hat{\mu}_n - \mu)^2)} = O(n^{-\frac{1}{2}})$
+> $RMSE = \sqrt{\mathbb{E}((\hat{\mu}_n - \mu)^2)} = O(n^{-\frac{1}{2}})$ (1.5)
 
 $equation 1.5$ illustrates that to get one more digit of accuracy, we need pay 99 times more samples.
 
@@ -42,6 +42,4 @@ $equation 1.5$ illustrates that to get one more digit of accuracy, we need pay 9
 
 For simpson's rule with d dimensions,
 
-$$
-{RMSE}_{simpson} = O(n^{-\frac{4}{d}})
-$$
+> ${RMSE}_{simpson} = O(n^{-\frac{4}{d}})$ (1.6)
