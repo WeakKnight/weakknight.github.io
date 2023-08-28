@@ -5,9 +5,7 @@
 Simply, we can express a quantity by the expected value of a random variable $Y$, such as $\mu = \mathbb{E}(Y)$. Then we can generate values $Y_1,...,Y_n$ independently and randomly from the distribution of $Y$ and take their average as our estimate of $\mu$.
 
 $$
-\begin{1.1} 
 \hat{\mu}_n = \frac{1}{n}\sum_{n=1}^{n} Y_i 
-\end{1.1}
 $$
 
 ---
@@ -44,4 +42,8 @@ $equation 1.5$ illustrates that to get one more digit of accuracy, we need pay 9
 
 ### In Comparison With Simpson's Rule
 
-RMSE of 
+For simpson's rule with d dimensions,
+
+$$
+{RMSE}_{simpson} = O(n^{-\frac{4}{d}})
+$$
