@@ -123,6 +123,14 @@ div.content.noSideBar{
     margin-left: 0px;
 }
 
+.blog .katex .base{
+    color: rgb(212, 212, 212);
+}
+
+.blog .katex .tag{
+    color: rgb(212, 212, 212);
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
