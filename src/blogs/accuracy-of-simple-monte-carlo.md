@@ -2,12 +2,13 @@
 
 ### Simple Monte Carlo
 
-Simply, we can express a quantity by the expected value of a random variable $Y$, such as $\mu = \mathbb{E}(Y)$. Then we can generate values $Y_1,...,Y_n$ independently and randomly from the distribution of $Y$ and take their average as our estimate of $\mu$.
-
 $$
 \tag{1.1} 
 \hat{\mu}_n = \frac{1}{n}\sum_{n=1}^{n} Y_i
 $$
+
+Simply, we can express a quantity by the expected value of a random variable $Y$, such as $\mu = \mathbb{E}(Y)$. Then we can generate values $Y_1,...,Y_n$ independently and randomly from the distribution of $Y$ and take their average as our estimate of $\mu$.
+
 ---
 
 ### Strong law of large numbers
@@ -56,7 +57,7 @@ $eq~1.5$ illustrates that to get one more digit of accuracy, we need pay 99 time
 
 $$
 \tag{1.6}
-{RMSE}_{simpson} = O(n^{-\frac{4}{d}})
+{RMSE}_{Simpson} = O(n^{-\frac{4}{d}})
 $$
 
-For simpson's rule with d dimensions, we have 
+Although Simpson's rule has an error of $O(n^{-4})$, its precision deteriorates rapidly as the dimensions of the problem increase.
