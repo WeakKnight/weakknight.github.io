@@ -1,12 +1,16 @@
 {
     "articles": [
         {
+            "path":"error-estimation-of-monte-carlo.md",
+            "title":"Error Estimation In Monte Carlo Methods"
+        },
+        {
             "path":"accuracy-of-simple-monte-carlo.md",
-            "title":"Accuracy of simple Monte Carlo"
+            "title":"Accuracy Of Simple Monte Carlo"
         },
         {
             "path":"sample-elimination.md",
-            "title":"Sample Elimination vs Sample Relaxation"
+            "title":"Sample Elimination VS Sample Relaxation"
         },
         {
             "path": "color-gamut-vis.md",
