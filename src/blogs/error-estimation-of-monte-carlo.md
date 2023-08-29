@@ -37,3 +37,5 @@ $$
 \tag{1.5}
 \Phi(x) = \int_{-\infty}^{x} \varphi(t) dt
 $$
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_cdf.png" width="45%"/>
