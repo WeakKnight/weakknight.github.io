@@ -26,7 +26,7 @@ The standard normal distribution is the normal distribution with mean 0 and vari
 
 $$
 \tag{1.4}
-\varphi(t) = \frac{e^{-\frac{1}{2}t^2}}{\sqrt{2\pi}}, ~~~~for~~-\infty < x < \infty
+\varphi(t) = \frac{e^{-\frac{1}{2}t^2}}{\sqrt{2\pi}}, ~~~~for~~-\infty < t < \infty
 $$
 
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_pdf.png" width="45%"/>
@@ -39,3 +39,12 @@ $$
 $$
 
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_cdf.png" width="45%"/>
+
+When T has the standard normal distribution, we write it as $T \backsim \mathcal{N}(0, 1)$
+
+---
+### IID Central Limit Theorem
+Let $Y_1, Y_2, ..., Y_n$ be independent and identically distributed(IID) random variables with mean $\mu$ and finite variance $\sigma^2 > 0$. Let $\hat{\mu_n}=\frac{1}{n}\sum_{n=1}^{n}{Y_i}$
+$$
+
+$$
