@@ -369,4 +369,11 @@ plt.show()
 
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/color_gamut_vis/output_10_0.svg" width="45%"/>
     
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
