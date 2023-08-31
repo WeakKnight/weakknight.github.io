@@ -19,6 +19,8 @@ $$
 \hat{\sigma}^2 = \frac{1}{n}\sum_{n=1}^{n}(Y_i - \hat{\mu_n})^2
 $$
 
+With a large $n$, we can assume that $$E(s)=\sigma$$
+
 ---
 ### Standard Normal Distribution
 
@@ -43,8 +45,13 @@ $$
 When T has the standard normal distribution, we write it as $T \backsim \mathcal{N}(0, 1)$
 
 ---
-### IID Central Limit Theorem
-Let $Y_1, Y_2, ..., Y_n$ be independent and identically distributed(IID) random variables with mean $\mu$ and finite variance $\sigma^2 > 0$. Let $\hat{\mu_n}=\frac{1}{n}\sum_{n=1}^{n}{Y_i}$
+### Confidence Interval
+
+To understand how to compute a confidence interval, it is necessary to first introduce the IID (independently and identically distributed) Central Limit Theorem.
+
+##### IID Central Limit Theorem
+Let $Y_1, Y_2, ..., Y_n$ be independent and identically distributed random variables with mean $\mu$ and finite variance $\sigma^2 > 0$. Let $\hat{\mu_n}=\frac{1}{n}\sum_{n=1}^{n}{Y_i}$. Then for all $z\in\mathbb{R}$
+$$
+\mathbb{P}(\sqrt{n}\frac{\hat{\mu_n}-\mu}{\sigma} \le z) \to \Phi(z)
 $$
 
-$$
