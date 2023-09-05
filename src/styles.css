@@ -118,6 +118,11 @@ div.content.sidebar-off {
     background-color: rgb(30,30,30);
 }
 
+.blog .medium-image {
+    width: 45%;
+    max-width: 600px;
+}
+
 div.content.noSideBar{
     width: 100%;
     margin-left: 0px;

@@ -31,7 +31,7 @@ $$
 \varphi(t) = \frac{e^{-\frac{1}{2}t^2}}{\sqrt{2\pi}}, ~~~~for~~-\infty < t < \infty
 $$
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_pdf.png" width="45%"/>
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_pdf.png" class ="medium-image"/>
 
 The cumulative distribution function is 
 
@@ -40,7 +40,7 @@ $$
 \Phi(x) = \int_{-\infty}^{x} \varphi(t) dt
 $$
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_cdf.png" width="45%"/>
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_cdf.png" class ="medium-image"/>
 
 When T has the standard normal distribution, we write it as $T \backsim \mathcal{N}(0, 1)$
 
