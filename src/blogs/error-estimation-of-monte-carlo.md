@@ -176,6 +176,13 @@ then the confidence interval is
 $$
 (0.467s^2, 3.112s^2)
 $$
+
+---
+
+### References
+> [Art B. Owen.(2013).Monte Carlo theory, methods and examples.](https://artowen.su.domains/mc/)<br>
+> [Carol Alexander.(2001).Market Models.Chapter 5.](http://www.wiley.com/legacy/wileychi/marketmodels/chapter5.pdf)<br>
+
 <br/>
 <br/>
 <br/>

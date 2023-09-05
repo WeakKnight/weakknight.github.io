@@ -62,6 +62,11 @@ $$
 
 Although Simpson's rule is characterized by an error rate of $O(n^{-4})$, its precision experiences a rapid degradation as the dimensions of the problem escalate. Consequently, Monte Carlo methods emerge as a more practical alternative for addressing problems exhibiting higher dimensions.
 
+---
+
+### References
+> [Monte Carlo theory, methods and examples](https://artowen.su.domains/mc/)<br>
+
 <br/>
 <br/>
 <br/>
