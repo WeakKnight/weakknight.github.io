@@ -52,7 +52,89 @@ To understand how to compute a confidence interval, it is necessary to first int
 ##### IID Central Limit Theorem
 Let $Y_1, Y_2, ..., Y_n$ be independent and identically distributed random variables with mean $\mu$ and finite variance $\sigma^2 > 0$. Let $\hat{\mu_n}=\frac{1}{n}\sum_{n=1}^{n}{Y_i}$. Then for all $z\in\mathbb{R}$
 $$
+\tag{1.6}
 \mathbb{P}(\sqrt{n}\frac{\hat{\mu_n}-\mu}{\sigma} \le z) \to \Phi(z)
+$$
+
+We also need Slutsky's Theorm for safely plugging estimated variables.
+
+##### Slutsky’s Theorem
+Suppose that random variables $Y_n \xrightarrow{d} Y$ and $Z_n \xrightarrow{d} \tau$. Then $Y_n + Z_n \xrightarrow{d} Y + \tau$ and $Y_n Z_n \xrightarrow{d} \tau Y$. If $\tau \ne 0$ then $Y_n/Z_n \xrightarrow{d} Y/\tau$.
+
+Now we have enough facilities to derive what we want.
+
+Assuming $\Delta > 0$, we can write the probability that a random variable is outside the confidence intervel as follows, 
+
+$$
+\mathbb{P}(|\hat{\mu_n}-\mu| \ge \frac{\Delta\sigma}{\sqrt{n}}) 
+$$
+
+Which correspond to the following confidence interval
+
+$$
+ \tag{1.7}
+ \hat{\mu_n} - \frac{\Delta \sigma}{\sqrt{n}} \le \mu \le  \hat{\mu_n} + \frac{\Delta \sigma}{\sqrt{n}}
+$$
+
+And because $\sigma \xrightarrow{d} s$,
+
+$$
+\mathbb{P}(|\hat{\mu_n}-\mu| \ge \frac{\Delta\sigma}{\sqrt{n}})  \xrightarrow{d} \mathbb{P}(|\hat{\mu_n}-\mu| \ge \frac{\Delta s}{\sqrt{n}}) 
+$$
+
+Then we have
+
+$$
+\mathbb{P}(|\hat{\mu_n}-\mu| \ge \frac{\Delta s}{\sqrt{n}}) = \mathbb{P}(\sqrt{n}\frac{\hat{\mu_n}-\mu}{s} \ge \Delta)+ \mathbb{P}(\sqrt{n}\frac{\hat{\mu_n}-\mu}{s} \le -\Delta)
+$$
+
+Based on $1.6$,
+
+$$
+\mathbb{P}(\sqrt{n}\frac{\hat{\mu_n}-\mu}{s} \ge \Delta) \to 1 - \Phi(\Delta)
+$$
+
+$$
+\mathbb{P}(\sqrt{n}\frac{\hat{\mu_n}-\mu}{s} \le -\Delta) \to \Phi(-\Delta)
+$$
+
+Because $\varphi(\Delta) = \varphi(-\Delta)$ and $\Phi(\infty) = 1$,
+$$
+\Phi(\Delta) + \Phi(-\Delta) = 1
+$$
+
+Then we have
+
+$$
+\tag{1.8}
+\mathbb{P}(|\hat{\mu_n}-\mu| \ge \frac{\Delta s}{\sqrt{n}}) \to 2\Phi(-\Delta) 
+$$
+
+With $1.7$ and $1.8$, we can derive confidence interval with different converging chances. For example, if we want to have a confidence interval with 99% converging chance, based on $1.8$ we can have
+
+$$
+2\Phi(-\Delta) = 0.01
+$$
+
+$$
+\Phi(\Delta) = 0.995
+$$
+
+$$
+\Delta = \Phi^{-1}(0.995) \approx 2.58
+$$
+
+Finally, based on $1.7$, we can write the confidence interval with 99% converging chance as follows,
+
+$$
+\hat{\mu_n} - \frac{2.58 s}{\sqrt{n}} \le \mu \le  \hat{\mu_n} + \frac{2.58 s}{\sqrt{n}}
+$$
+
+For confidence chance $\alpha$, we have the confidence interval as follows,
+
+$$
+\tag{1.9}
+\hat{\mu_n} \pm \frac{\Phi^{-1}(1 - \alpha / 2) s}{\sqrt{n}}
 $$
 
 <br/>
