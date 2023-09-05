@@ -110,7 +110,7 @@ $$
 \mathbb{P}(|\hat{\mu_n}-\mu| \ge \frac{\Delta s}{\sqrt{n}}) \to 2\Phi(-\Delta) 
 $$
 
-With $1.7$ and $1.8$, we can derive confidence interval with different converging chances. For example, if we want to have a confidence interval with 99% converging chance, based on $1.8$ we can have
+With $1.7$ and $1.8$, we can derive confidence interval with different coverage chances. For example, if we want to have a confidence interval with 99% coverage chance, based on $1.8$ we can have
 
 $$
 2\Phi(-\Delta) = 0.01
@@ -124,13 +124,13 @@ $$
 \Delta = \Phi^{-1}(0.995) \approx 2.58
 $$
 
-Finally, based on $1.7$, we can write the confidence interval with 99% converging chance as follows,
+Finally, based on $1.7$, we can write the confidence interval with 99% coverage chance as follows,
 
 $$
 \hat{\mu_n} - \frac{2.58 s}{\sqrt{n}} \le \mu \le  \hat{\mu_n} + \frac{2.58 s}{\sqrt{n}}
 $$
 
-For confidence chance $\alpha$, we have the confidence interval as follows,
+For coverage chance $\alpha$, we have the confidence interval as follows,
 
 $$
 \tag{1.9}
@@ -144,7 +144,7 @@ $$
 \hat{\mu_n} \pm {t_{(1 - \alpha/2, n-1)}} s / \sqrt{n}
 $$
 
-In realtime rendering, we often have a limited sample count like 8 or 16. Let us compute the confidence interval with converging chance 99% using normal distribution and t-distribution. Assuming $n = 16$,
+In realtime rendering, we often have a limited sample count like 8 or 16. Let us compute the confidence interval with coverage chance 99% using normal distribution and t-distribution. Assuming $n = 16$,
 
 If using normal distribution,
 $$
@@ -165,7 +165,7 @@ $$
 n s^2 / {\chi}_{n,\alpha / 2}^{2} \le \mu \le n s^2 / {\chi}_{n,1 - \alpha / 2}^{2}
 $$
 
-Assuming that $n = 16$ and the converging chance is $99\%$, 
+Assuming that $n = 16$ and the coverage chance is $99\%$, 
 $$
  {\chi}_{16, 0.005}^{2} = 34.267
 $$
