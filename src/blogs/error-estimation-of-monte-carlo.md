@@ -177,6 +177,38 @@ $$
 (0.467s^2, 3.112s^2)
 $$
 
+##### Computing the standard error
+
+Now we have utilities to compute the confidence interval, but we still need a robust way to compute $s$. Luckily, we have one-algorithm for this objectivity.
+
+Let $S_n = \sum_{i=1}^{n}(y_i - \hat{\mu_n})^2$, $S_1 = 0$ and $\hat{\mu_1} = y_1$
+
+$$
+\delta_i = y_i - \hat{\mu_{i-1}}
+$$
+
+$$
+\hat{\mu_i} = \hat{\mu_{i-1}} + \delta_i / i
+$$
+
+$$
+S_i = S_{i - 1} + \frac{i - 1}{i}\delta_i^2
+$$
+
+$$
+s^2 = S_n/(n - 1)
+$$
+
+<!-- If using moving average $\hat{\mu_n} =\lambda \hat{\mu_{n - 1}} + (1-\lambda)y_n$, 
+
+$$
+\delta_i = y_i - \hat{\mu_{i}}
+$$
+
+$$
+
+$$ -->
+
 ---
 
 ### References
