@@ -144,7 +144,7 @@ $$
 \hat{\mu_n} \pm {t_{(1 - \alpha/2, n-1)}} s / \sqrt{n}
 $$
 
-In realtime rendering, we often have a limited sample count like 8 or 16. Let us compute the confidence interval with convering chance 99% using normal distribution and t-distribution. Assuming $n = 16$,
+In realtime rendering, we often have a limited sample count like 8 or 16. Let us compute the confidence interval with converging chance 99% using normal distribution and t-distribution. Assuming $n = 16$,
 
 If using normal distribution,
 $$
@@ -158,6 +158,24 @@ $$
 
 Using t-distribution, the confidence interval is roughly $28.5\%$ larger.
 
+Furthermore, we usually use a moving average estimator for realtime rendering where normal distribution and t-distribution are not appliable. For moving average, we have confidence interval as follows
+
+$$
+\tag{1.11}
+n s^2 / {\chi}_{n,\alpha / 2}^{2} \le \mu \le n s^2 / {\chi}_{n,1 - \alpha / 2}^{2}
+$$
+
+Assuming that $n = 16$ and the converging chance is $99\%$, 
+$$
+ {\chi}_{16, 0.005}^{2} = 34.267
+$$
+$$
+ {\chi}_{16, 0.995}^{2} = 5.142
+$$
+then the confidence interval is
+$$
+(0.467s^2, 3.112s^2)
+$$
 <br/>
 <br/>
 <br/>
