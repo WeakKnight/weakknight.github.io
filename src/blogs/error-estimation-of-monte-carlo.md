@@ -137,6 +137,27 @@ $$
 \hat{\mu_n} \pm \frac{\Phi^{-1}(1 - \alpha / 2) s}{\sqrt{n}}
 $$
 
+However, our definition of confidence interval is still in an estimated form. For a small n, it is better to use the Student's t-distribution instead of the standard normal distribution. Then we can have
+
+$$
+\tag{1.10}
+\hat{\mu_n} \pm {t_{(1 - \alpha/2, n-1)}} s / \sqrt{n}
+$$
+
+In realtime rendering, we often have a limited sample count like 8 or 16. Let us compute the confidence interval with convering chance 99% using normal distribution and t-distribution. Assuming $n = 16$,
+
+If using normal distribution,
+$$
+\hat{\mu_n} \pm  0.645s
+$$
+
+If using t-distribution,
+$$
+\hat{\mu_n} \pm  0.737s
+$$
+
+Using t-distribution, the confidence interval is roughly $28.5\%$ larger.
+
 <br/>
 <br/>
 <br/>
