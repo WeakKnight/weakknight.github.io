@@ -242,7 +242,7 @@ $$
 Based on $1.13$, if we have $Y_i \in [0, 100]$, and we want to know for confidence interval $\mu \pm 0.001$ with $99\%$ confidence,
 
 $$
-n = 2 \times {100}^2 log(2/0.01) / {0.001}^2 = 1.06 \times {10}^{11}
+n = 2 \times {100}^2 log(2/0.01) / {0.001}^2 \approx 1.06 \times {10}^{11}
 $$
 
 For confidence interval $\mu \pm 0.1$ with $90\%$ confidence,
@@ -290,7 +290,15 @@ $$
 $$ -->
 
 ---
+### Application In Computer Graphics
 
+Confidence intervals can be utilized for various applications such as Path Tracing with Adaptive Sampling or Image Reconstruction tasks like denoising and image upscaling.
+
+Let us take a look at a straightforward implementation of adaptive sampling.
+
+For pixel color $p_x$, and we use moving average with $n = 16$
+
+---
 ### References
 > [Art B. Owen.(2013).Monte Carlo theory, methods and examples.](https://artowen.su.domains/mc/)<br>
 > [Carol Alexander.(2001).Market Models.Chapter 5.](http://www.wiley.com/legacy/wileychi/marketmodels/chapter5.pdf)<br>
