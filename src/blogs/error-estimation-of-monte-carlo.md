@@ -22,7 +22,11 @@ $$
 With a large $n$, we can assume that $$E(s)=\sigma$$
 
 ---
-### Standard Normal Distribution
+### Confidence Interval
+
+To understand how to compute a confidence interval, it is necessary to first introduce Standard Normal Distribution and the IID (independently and identically distributed) Central Limit Theorem.
+
+##### Standard Normal Distribution
 
 The standard normal distribution is the normal distribution with mean 0 and variance 1, which has the following probability density function
 
@@ -43,11 +47,6 @@ $$
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/standard_normal_distribution_cdf.png" class ="medium-image"/>
 
 When T has the standard normal distribution, we write it as $T \backsim \mathcal{N}(0, 1)$
-
----
-### Confidence Interval
-
-To understand how to compute a confidence interval, it is necessary to first introduce the IID (independently and identically distributed) Central Limit Theorem.
 
 ##### IID Central Limit Theorem
 Let $Y_1, Y_2, ..., Y_n$ be independent and identically distributed random variables with mean $\mu$ and finite variance $\sigma^2 > 0$. Let $\hat{\mu_n}=\frac{1}{n}\sum_{n=1}^{n}{Y_i}$. Then for all $z\in\mathbb{R}$
