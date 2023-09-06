@@ -227,10 +227,11 @@ $$
 Finally
 
 $$
+\tag{1.13}
 n = \frac{2(b - a)^2 log(2/\delta)}{\varepsilon^2} 
 $$
 
-For example, if we have $Y_i \in [0, 100]$, and we want to know for confidence interval $\mu \pm 0.001$ with $99\%$ confidence,
+Based on $1.13$, if we have $Y_i \in [0, 100]$, and we want to know for confidence interval $\mu \pm 0.001$ with $99\%$ confidence,
 
 $$
 n = 2 \times {100}^2 log(2/0.01) / {0.001}^2 = 1.06 \times {10}^{11}
