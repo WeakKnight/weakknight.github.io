@@ -165,17 +165,22 @@ $$
 n s^2 / {\chi}_{n,\alpha / 2}^{2} \le \mu \le n s^2 / {\chi}_{n,1 - \alpha / 2}^{2}
 $$
 
-Assuming that $n = 16$ and the coverage chance is $99\%$, 
+Assuming that $n = 16$ and the coverage chance is $99\%$,
+
 $$
  {\chi}_{16, 0.005}^{2} = 34.267
 $$
+
 $$
  {\chi}_{16, 0.995}^{2} = 5.142
 $$
+
 then the confidence interval is
+
 $$
 (0.467s^2, 3.112s^2)
 $$
+
 ---
 ### Gauranteed Confidence Interval
 
