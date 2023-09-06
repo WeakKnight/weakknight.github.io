@@ -168,11 +168,11 @@ $$
 Assuming that $n = 16$ and the coverage chance is $99\%$,
 
 $$
- {\chi}_{16, 0.005}^{2} = 34.267
+\chi_{16, 0.005}^{2} = 34.267
 $$
 
 $$
- {\chi}_{16, 0.995}^{2} = 5.142
+\chi_{16, 0.995}^{2} = 5.142
 $$
 
 then the confidence interval is
