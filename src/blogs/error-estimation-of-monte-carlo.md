@@ -2,6 +2,8 @@
 
 ---
 ### Average Squared Error
+
+The most basic concept of error estimation is Average Squared Error. It can be defined as follows
 $$
 \tag{1.1} 
 \frac{\sigma^2}{n}
@@ -23,6 +25,8 @@ With a large $n$, we can assume that $$E(s)=\sigma$$
 
 ---
 ### Confidence Interval
+
+Another important concept that aids in estimating errors is the Confidence Interval. It offers an estimation of the interval in which the true value of a parameter of interest is likely to lie.
 
 To understand how to compute a confidence interval, it is necessary to first introduce Standard Normal Distribution and the IID (independently and identically distributed) Central Limit Theorem.
 
