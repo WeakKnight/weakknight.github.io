@@ -176,10 +176,81 @@ then the confidence interval is
 $$
 (0.467s^2, 3.112s^2)
 $$
+---
+### Gauranteed Confidence Interval
 
-##### Computing the standard error
+Until now, we have acquired the proficiency to calculate an estimated confidence interval. With further information, we can investigate the optimal sample size required to find a guaranteed confidence interval.
 
-Now we have utilities to compute the confidence interval, but we still need a robust way to compute $s$. Luckily, we have one-algorithm for this objectivity.
+##### Hoeffding's Inequality
+
+Let $Y_1 ..., Y_n$ be independent random variables with $\mathbb{P}(a_i \le Y_i \le b_i) = 1$ for $i = 1, ..., n$. Then for $\epsilon > 0$ 
+
+$$
+\tag{1.12}
+\mathbb{P}(|\sum_i(Y_i - \mathbb{E}(Y_i))| \ge \epsilon) \le 2 e^{-2\epsilon^2 / \sum_{i=1}^{n}(b_i - a_i)^2}
+$$
+
+Based on $1.12$, given bounds $[a, b]$ for random variables, we can compute how large $n$ must be for a gauranteed confidence interval.
+
+$$
+Let~\epsilon = n \varepsilon / 2
+$$
+
+Then
+
+$$
+\mathbb{P}(|\sum_i(Y_i - \mathbb{E}(Y_i))| \ge \epsilon) = \mathbb{P}(|\sum_i(Y_i - \mathbb{E}(Y_i))| \ge n \varepsilon / 2)
+$$
+
+$$
+\mathbb{P}(|\sum_i(Y_i - \mathbb{E}(Y_i))| \ge n \varepsilon / 2) = \mathbb{P}(\frac{1}{n}|\sum_i(Y_i - \mathbb{E}(Y_i))| \ge \varepsilon / 2)
+$$
+
+Then we have
+
+$$
+\mathbb{P}(|\hat{\mu} - \mu| \ge \varepsilon / 2) \le 2e^{-2(n \varepsilon / 2)^2 / \sum_{i=1}^{n}(b_i - a_i)^2}
+$$
+
+If we want a coverage chance $\delta$ for confidence interval $\hat{\mu} \pm \varepsilon / 2$
+
+$$
+\delta = 2e^{-2(n \varepsilon / 2)^2 / \sum_{i=1}^{n}(b_i - a_i)^2}
+$$
+
+Then 
+
+$$
+n = -log(\delta/2) 2(\sum_{i=1}^{n}(b_i - a_i)^2/n) / \varepsilon^2 
+$$
+
+Finally
+
+$$
+n = \frac{2(b - a)^2 log(2/\delta)}{\varepsilon^2} 
+$$
+
+For example, if we have $Y_i \in [0, 100]$, and we want to know for confidence interval $\mu \pm 0.001$ with $99\%$ confidence,
+
+$$
+n = 2 \times {100}^2 log(2/0.01) / {0.001}^2 = 1.06 \times {10}^{11}
+$$
+
+For confidence interval $\mu \pm 0.1$ with $90\%$ confidence,
+$$
+n = 2 \times {100}^2 log(2/0.1) / {0.1}^2 = 1.06 \times {10}^11 \approx 5,991,465
+$$
+
+<!-- and 
+
+$$
+\mathbb{P}(\sum_i(Y_i - \mathbb{E}(Y_i)) \le -\epsilon) \le e^{-2\epsilon^2 / \sum_{i=1}^{n}(b_i - a_i)^2}
+$$ -->
+
+---
+### Computing the standard error
+
+Currently, we possess computational tools to determine the confidence interval. However, we are in need of a reliable methodology to calculate the variable $s$. Fortunately, we have a suitable algorithm at our disposal to address this requirement.
 
 Let $S_n = \sum_{i=1}^{n}(y_i - \hat{\mu_n})^2$, $S_1 = 0$ and $\hat{\mu_1} = y_1$
 
