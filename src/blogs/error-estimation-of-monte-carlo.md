@@ -296,7 +296,7 @@ Confidence intervals can be utilized for various applications such as Path Traci
 
 Let us take a look at a straightforward implementation of adaptive sampling.
 
-For pixel color $p_x$, and we use moving average with $n = 16$
+For pixel color $p_x$, and the accumulator is based on moving average with $n = 16$
 
 ---
 ### References
