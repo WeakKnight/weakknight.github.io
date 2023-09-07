@@ -7,6 +7,8 @@ import BlogHelper from './core/bloghelper.js';
 import './styles.css';
 import './highlight.css';
 
+const MiniMap = require("minimap-js")
+
 const { marked } = require("marked");
 const markedKatex = require("marked-katex-extension");
 const options = {
@@ -82,6 +84,9 @@ let onChange = (previous, current) => {
             document.title = currentBlogTitle;
             try {
                 $("blog").html(marked(content, { renderer: renderer }));
+
+                var minimap = new MiniMap($("blog").element, options);
+                minimap.show();
             } catch (error) {
                 console.log(error);
             }
