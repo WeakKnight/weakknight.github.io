@@ -29,7 +29,7 @@ div.content {
     margin-left: 200px;
     margin-right: 30px;
     margin-top: 15px;
-    top: 48px;
+    /* top: 48px; */
     position: fixed;
     /* padding: 1px 16px; */
     height: calc(100% - 48px);
@@ -89,27 +89,27 @@ div.content.sidebar-off {
     overflow: hidden;
 }
 
-.blog>p {
+.blog p {
     color: rgb(212, 212, 212);
 }
 
-.blog>h1 {
+.blog h1 {
     color: rgb(212, 212, 212);
 }
 
-.blog>h2 {
+.blog h2 {
     color: rgb(212, 212, 212);
 }
 
-.blog>h3 {
+.blog h3 {
     color: rgb(212, 212, 212);
 }
 
-.blog>h4 {
+.blog h4 {
     color: rgb(212, 212, 212);
 }
 
-.blog>h5 {
+.blog h5 {
     color: rgb(212, 212, 212);
 }
 
@@ -134,6 +134,27 @@ div.content.noSideBar{
 
 .blog .katex .tag{
     color: rgb(212, 212, 212);
+}
+
+.blog .scrollbar-track-y {
+    right: 15px;
+    width: 15px;
+    background-color: rgb(30, 30, 30);
+}
+
+.content.miscs .scrollbar-track-y {
+    right: 41px;
+}
+
+.blog .scrollbar-thumb {
+    width: 15px;
+    background-color: rgb(79, 79, 79);
+    border-radius: 0px;
+}
+
+.blog .scroll-content {
+    margin-right: 25px;
+    margin-top: 8px;
 }
 
 /* width */

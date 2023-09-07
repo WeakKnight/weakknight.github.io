@@ -4,6 +4,8 @@ import NavBar from './components/navbar.js';
 import SideBar from './components/sidebar.js';
 import BlogHelper from './core/bloghelper.js';
 
+import Scrollbar from 'smooth-scrollbar';
+
 import './styles.css';
 import './highlight.css';
 
@@ -35,7 +37,7 @@ let currentBlogPath = "";
 let currentBlogTitle = "";
 
 let clearContent = () => {
-    $("content").html("");
+    $("scroll-content").html("");
 };
 
 let sideCloseButton = $("#side-close-button");
@@ -70,18 +72,25 @@ let resume = () => {
     globalStateMahine.changeState(STATE_RESUME);
 }
 
+Scrollbar.init($("blog").element);
+
 let onChange = (previous, current) => {
     clearContent();
-
+    
+    const navBarHeight = $("topnav").element.offsetHeight; // 替换`.navbar`为你的导航栏选择器
+    const blogBody = document.querySelector('.content');
+    blogBody.style.height = `calc(100vh - ${navBarHeight}px)`; // 计算并设置<body>的最小高度
+    
     if (current === STATE_HOME) {
         $("topnav").disableClass("sidebar-off");
         $("sidebar").disableClass("sidebar-off");
         $("content").disableClass("noSideBar");
+        $("content").disableClass("miscs");
 
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
             document.title = currentBlogTitle;
             try {
-                $("blog").html(marked(content, { renderer: renderer }));
+                $("scroll-content").html(marked(content, { renderer: renderer }));
             } catch (error) {
                 console.log(error);
             }
@@ -91,15 +100,16 @@ let onChange = (previous, current) => {
         $("topnav").enableClass("sidebar-off");
         $("sidebar").enableClass("sidebar-off");
         $("content").enableClass("noSideBar");
+        $("content").enableClass("miscs");
 
         if (current === STATE_RESUME) {
             BlogHelper.getBlogContent('resume.md').then((content) => {
-                $("blog").html(marked(content, { renderer: renderer }));
+                $("scroll-content").html(marked(content, { renderer: renderer }));
             });
         }
         else if (current === STATE_PUBLICATIONS) {
             BlogHelper.getBlogContent('publications.md').then((content) => {
-                $("blog").html(marked(content, { renderer: renderer }));
+                $("scroll-content").html(marked(content, { renderer: renderer }));
             });
         }
     }
@@ -151,7 +161,7 @@ BlogHelper.getBlogList().then((articles) => {
 
                 BlogHelper.getBlogContent(article.path).then((content) => {
                     try {
-                        $("blog").html(marked(content, { renderer: renderer }));
+                        $("scroll-content").html(marked(content, { renderer: renderer }));
                     }
                     catch (error) {
                         console.log(error);
