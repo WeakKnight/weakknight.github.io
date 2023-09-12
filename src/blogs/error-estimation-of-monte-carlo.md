@@ -288,6 +288,21 @@ $$
 $$
 
 $$ -->
+---
+### Variance Of Weighted Average 
+
+We need take extra care for weighted average. It can be wrriten as
+
+$$
+\hat{\mu}_n = {\sum_{i=1}^{n} w_i Y_i}~, ~where~~\sum_{i=1}^{n} w_i = 1
+$$
+
+Its variance can be wrriten as
+
+$$
+\tag{1.14}
+Var(\hat{\mu}_n) = {\sum_{i=1}^{n} w_i^2 (Y_i - \hat{\mu}_n)^2}
+$$
 
 ---
 ### Application In Computer Graphics
@@ -297,6 +312,28 @@ Confidence intervals can be utilized for various applications such as Path Traci
 Let us take a look at a straightforward implementation of adaptive sampling.
 
 For pixel color $p_x$, and the accumulator is based on moving average with $n = 16$.
+
+Moving average can be wrriten as 
+
+$$
+\hat{x}_n = \lambda x_n + (1 - \lambda)\hat{x}_{n-1}
+$$
+
+It can be generalized as a weighted average employing the subsequent weights
+
+$$
+w_0 = (1- \lambda)^n~,~for~~i = 0
+$$
+
+$$
+w_i = \lambda(1-\lambda)^{n - i}~,~for~~i > 0
+$$
+
+Plug into $1.14$
+
+$$
+Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 + {\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2{n - i}} (x_i - \hat{x}_n)^2}
+$$
 
 ---
 ### References
