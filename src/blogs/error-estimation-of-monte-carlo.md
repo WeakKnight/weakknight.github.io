@@ -332,7 +332,7 @@ $$
 Plug into $1.14$
 
 $$
-Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 + {\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2{n - i}} (x_i - \hat{x}_n)^2}
+Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 + {\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2(n - i)} (x_i - \hat{x}_n)^2}
 $$
 
 ---
