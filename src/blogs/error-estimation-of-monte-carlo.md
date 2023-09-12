@@ -311,7 +311,7 @@ Confidence intervals can be utilized for various applications such as Path Traci
 
 Let us take a look at a straightforward implementation of adaptive sampling.
 
-For pixel color $p_x$, and the accumulator is based on moving average with $n = 16$.
+For pixel color $p_x$, and the accumulator is based on moving average with $n = 15$.
 
 Moving average can be wrriten as 
 
@@ -340,13 +340,17 @@ x_i = \frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda}
 $$
 
 $$
-Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 +{\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2(n - i)} (\frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda} - \hat{x}_n)^2}
+Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 + {\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2(n - i)} (\frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda} - \hat{x}_n)^2}
 $$
 
 Assume $\hat{x}_n \approx \hat{x}_{n - 1}$
 
 $$
-Var(\hat{x}_n) \approx Var(\hat{x}_{n - 1}) + \lambda^2 (\frac{\hat{x}_n - (1 - \lambda)\hat{x}_{n-1}}{\lambda} - \hat{x}_n)^2
+Var(\hat{x}_0) \approx (1- \lambda)^{2n}(x_0 - \hat{x}_{n-1})^2 \approx 0 
+$$
+
+$$
+Var(\hat{x}_i) \approx Var(\hat{x}_{i - 1}) + \lambda^2 (\frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda} - \hat{x}_i)^2 ~,~for~~i >= 1
 $$
 
 ---
