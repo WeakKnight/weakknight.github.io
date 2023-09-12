@@ -335,6 +335,20 @@ $$
 Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 + {\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2(n - i)} (x_i - \hat{x}_n)^2}
 $$
 
+$$
+x_i = \frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda}
+$$
+
+$$
+Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 +{\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2(n - i)} (\frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda} - \hat{x}_n)^2}
+$$
+
+Assume $\hat{x}_n \approx \hat{x}_{n - 1}$
+
+$$
+Var(\hat{x}_n) \approx Var(\hat{x}_{n - 1}) + \lambda^2 (\frac{\hat{x}_n - (1 - \lambda)\hat{x}_{n-1}}{\lambda} - \hat{x}_n)^2
+$$
+
 ---
 ### References
 > [Art B. Owen.(2013).Monte Carlo theory, methods and examples.](https://artowen.su.domains/mc/)<br>
