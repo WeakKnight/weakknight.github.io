@@ -12,10 +12,10 @@ export default class NavBar {
 
         this.parent.appendChild(this.container);
 
-        if (!navigator.userAgentData.mobile)
+        // if (!navigator.userAgentData.mobile)
         {
                 let title = document.createElement('a');
-                title.innerText = "Tianyu's Blog";
+                title.innerText = "Tianyu";
                 title.style.float = "left";
                 title.style.fontWeight = "bold"
                 title.href = "https://weakknight.github.io/";
