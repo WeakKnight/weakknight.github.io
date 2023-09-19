@@ -414,13 +414,6 @@ The following image is the rendering result of the same techniques but with adap
 
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/adaptive_sampling.png" class ="medium-large-image"/>
 
-<figure>
-      <image-compare label-text="Use the slider to control the visibility of the two images.">
-        <img slot="image-1" src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/uniform_sampling.png" class ="medium-large-image"/>
-        <img slot="image-2" src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/adaptive_sampling.png" class ="medium-large-image"/>
-      </image-compare>
-</figure>
-
 ---
 ### References
 > [Art B. Owen.(2013).Monte Carlo theory, methods and examples.](https://artowen.su.domains/mc/)<br>
