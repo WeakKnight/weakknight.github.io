@@ -307,6 +307,7 @@ $$
 ---
 ### Using Confidence Intervals For Real-time Adaptive Sampling With Moving Average
 
+#### Theory
 Confidence intervals can be utilized for various applications such as Path Tracing with Adaptive Sampling or Image Reconstruction tasks like denoising and image upscaling.
 
 Let us take a look at a straightforward implementation of adaptive sampling.
@@ -355,13 +356,55 @@ $$
 Var(\hat{x}_i) \approx Var(\hat{x}_{i - 1}) + \lambda^2 (\frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda} - \hat{x}_i)^2 ~,~for~~i >= 1
 $$
 
+#### Implementation
+
+The pseudocode for variance maintaining seems as follows
+
+```cpp
+const sampleCount = 16; // n = 15
+float variancePrev; // the variance of previous frame
+float xPrev; // the pixel color of previous frame
+float x; // the pixel color of current frame
+float lambda;
+
+// Update variance based on 1.16
+variance = (x - (1.0f - lambda) * xPrev) / lambda - x;
+variance = lambda * variance;
+variance = variance * variance;
+variance = variancePrev + variance;
+
+// assuming that we will finally get a stable variance and our sample stream has a fixed count, so we should remove the oldest sample
+variance *= (float)sampleCount / (sampleCount + 1);
+```
+
+The pseudocode for adaptive sampling seems as follows
+
+```cpp
+float variancePrev; // the variance of previous frame
+float xPrev; // the pixel color of previous frame
+
+const float threshold = 0.3f; // we know the size of the confidence interval is proportional to the variance(formula 1.11), so we use a threshold factor to approximate this behaviour
+
+// If The Confidence Interval Is Too Big Compared With The Estimated Value
+if ((threshold * xPrev) < variancePrev)
+{
+    sampleNum = 4u;
+}
+else
+{
+    sampleNum = 1u;
+}
+```
+
+#### Result
+
 The following image is the rendering result of ray-traced ambient occlusion and soft shadow with 1 ray sample per texel
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/uniform_sampling.png" class ="medium-large-image"/>
 
 The following image is the visualization(brighter area means bigger variance) of the estimated variance for 1 spp result based on $1.15$ and $1.16$
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/variance_visualization.png" class ="medium-large-image"/>
 
-The red part of the following image is the approximation of the area which allocates more samples
+The red part of the following image is the rough approximation of the area which allocates more samples
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/adpative_sample_visualization.png" class ="medium-large-image"/>
 
 The following image is the rendering result of the same techniques but with adaptive sampling
