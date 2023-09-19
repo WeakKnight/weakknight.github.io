@@ -124,6 +124,11 @@ div.content.sidebar-off {
     max-width: 600px;
 }
 
+.blog .medium-large-image {
+    width: 65%;
+    max-width: 900px;
+}
+
 div.content.noSideBar{
     width: 100%;
     margin-left: 0px;

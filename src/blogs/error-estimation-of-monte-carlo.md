@@ -305,13 +305,13 @@ Var(\hat{\mu}_n) = {\sum_{i=1}^{n} w_i^2 (Y_i - \hat{\mu}_n)^2}
 $$
 
 ---
-### Application In Computer Graphics
+### Using Confidence Intervals For Real-time Adaptive Sampling With Moving Average
 
 Confidence intervals can be utilized for various applications such as Path Tracing with Adaptive Sampling or Image Reconstruction tasks like denoising and image upscaling.
 
 Let us take a look at a straightforward implementation of adaptive sampling.
 
-For pixel color $p_x$, and the accumulator is based on moving average with $n = 15$.
+For pixel color $x$, and the accumulator is based on moving average with $n = 15~, n \in [0, 15]$.
 
 Moving average can be wrriten as 
 
@@ -343,15 +343,29 @@ $$
 Var(\hat{x}_n) = (1- \lambda)^{2n}(x_0 - \hat{x}_n)^2 + {\sum_{i=1}^{n} \lambda^2(1-\lambda)^{2(n - i)} (\frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda} - \hat{x}_n)^2}
 $$
 
-Assume $\hat{x}_n \approx \hat{x}_{n - 1}$
+Assume $\hat{x}_n \approx \hat{x}_{n - 1}$. Finally, for moving average, we have
 
 $$
+\tag{1.15}
 Var(\hat{x}_0) \approx (1- \lambda)^{2n}(x_0 - \hat{x}_{n-1})^2 \approx 0 
 $$
 
 $$
+\tag{1.16}
 Var(\hat{x}_i) \approx Var(\hat{x}_{i - 1}) + \lambda^2 (\frac{\hat{x}_i - (1 - \lambda)\hat{x}_{i-1}}{\lambda} - \hat{x}_i)^2 ~,~for~~i >= 1
 $$
+
+The following image is the rendering result of ray-traced ambient occlusion and soft shadow with 1 ray sample per texel
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/uniform_sampling.png" class ="medium-large-image"/>
+
+The following image is the visualization(brighter area means bigger variance) of the estimated variance for 1 spp result based on $1.15$ and $1.16$
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/variance_visualization.png" class ="medium-large-image"/>
+
+The red part of the following image is the approximation of the area which allocates more samples
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/adpative_sample_visualization.png" class ="medium-large-image"/>
+
+The following image is the rendering result of the same techniques but with adaptive sampling
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/adaptive_sampling.png" class ="medium-large-image"/>
 
 ---
 ### References
