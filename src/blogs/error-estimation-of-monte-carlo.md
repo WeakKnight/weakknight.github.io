@@ -399,15 +399,19 @@ else
 #### Result
 
 The following image is the rendering result of ray-traced ambient occlusion and soft shadow with 1 ray sample per texel
+
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/uniform_sampling.png" class ="medium-large-image"/>
 
 The following image is the visualization(brighter area means bigger variance) of the estimated variance for 1 spp result based on $1.15$ and $1.16$
+
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/variance_visualization.png" class ="medium-large-image"/>
 
 The red part of the following image is the rough approximation of the area which allocates more samples
+
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/adpative_sample_visualization.png" class ="medium-large-image"/>
 
 The following image is the rendering result of the same techniques but with adaptive sampling
+
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/mc/adaptive_sampling.png" class ="medium-large-image"/>
 
 ---
