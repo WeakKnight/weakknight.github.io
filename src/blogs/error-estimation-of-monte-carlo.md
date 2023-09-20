@@ -1,5 +1,7 @@
 ## Error Estimation In Monte Carlo Methods
 
+In this blog post, we're going to unpack the method of evaluating errors in Monte Carlo Methods. We'll delve into topics like average squared error and confidence intervals in various scenarios. This includes dealing with confidence intervals with a large sample count, those with a small sample count, guaranteed ones, and those using moving averages. To wrap things up, I'll go over an example of adaptive sampling for real-time rendering, which will help illustrate how to practically implement the theories we're covering in this post. Let's get started and unravel these methods together.
+
 ---
 ### Average Squared Error
 
@@ -185,7 +187,7 @@ $$
 $$
 
 ---
-### Gauranteed Confidence Interval
+### Guaranteed Confidence Interval
 
 Until now, we have acquired the proficiency to calculate an estimated confidence interval. With further information, we can investigate the optimal sample size required to find a guaranteed confidence interval.
 
