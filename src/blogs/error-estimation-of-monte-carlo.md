@@ -13,12 +13,12 @@ It is often difficult to precisely evaluate $\sigma$, so we need to estimate it 
 
 $$
 \tag{1.2}
-s^2 = \frac{1}{n - 1}\sum_{n=1}^{n}(Y_i - \hat{\mu_n})^2
+s^2 = \frac{1}{n - 1}\sum_{i=1}^{n}(Y_i - \hat{\mu_n})^2
 $$
 
 $$
 \tag{1.3}
-\hat{\sigma}^2 = \frac{1}{n}\sum_{n=1}^{n}(Y_i - \hat{\mu_n})^2
+\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{\mu_n})^2
 $$
 
 With a large $n$, we can assume that $$E(s)=\sigma$$
@@ -53,7 +53,7 @@ $$
 When T has the standard normal distribution, we write it as $T \backsim \mathcal{N}(0, 1)$
 
 ##### IID Central Limit Theorem
-Let $Y_1, Y_2, ..., Y_n$ be independent and identically distributed random variables with mean $\mu$ and finite variance $\sigma^2 > 0$. Let $\hat{\mu_n}=\frac{1}{n}\sum_{n=1}^{n}{Y_i}$. Then for all $z\in\mathbb{R}$
+Let $Y_1, Y_2, ..., Y_n$ be independent and identically distributed random variables with mean $\mu$ and finite variance $\sigma^2 > 0$. Let $\hat{\mu_n}=\frac{1}{n}\sum_{i=1}^{n}{Y_i}$. Then for all $z\in\mathbb{R}$
 $$
 \tag{1.6}
 \mathbb{P}(\sqrt{n}\frac{\hat{\mu_n}-\mu}{\sigma} \le z) \to \Phi(z)
