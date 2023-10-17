@@ -91,6 +91,7 @@ let onChange = (previous, current) => {
             document.title = currentBlogTitle;
             try {
                 $("scroll-content").html(marked(content, { renderer: renderer }));
+                pseudocode.renderClass("pseudocode");
             } catch (error) {
                 console.log(error);
             }
