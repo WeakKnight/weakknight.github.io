@@ -13,11 +13,13 @@ $$
 ### RIS Random Process
 
 <pre class="pseudocode" lineNumber="true">
-    % This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
     \begin{algorithm}
-    \caption{Quicksort}
+    \caption{Resampled Importance Sampling}
     \begin{algorithmic}
-    \PROCEDURE{Quicksort}{$A, p, r$}
+    \PROCEDURE{RIS}{$M$}
+        \FOR{$i = 1$ \TO $M$}
+            \STATE Generate $X_i$
+        \ENDFOR
         \IF{$p < r$} 
             \STATE $q = $ \CALL{Partition}{$A, p, r$}
             \STATE \CALL{Quicksort}{$A, p, q - 1$}
