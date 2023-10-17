@@ -4,25 +4,21 @@ body {
     overflow: hidden;
 }
 
-pre
-{
-    background-color: rgb(37,37,38);
+pre {
+    background-color: rgb(37, 37, 38);
     overflow: auto;
 }
 
-code
-{
+code {
     color: #cccccc;
 }
 
-p
-{
+p {
     color: #cccccc;
 }
 
-a
-{
-    color: rgb(55, 148,255);
+a {
+    color: rgb(55, 148, 255);
     text-decoration: auto;
 }
 
@@ -44,8 +40,7 @@ div.content.sidebar-off {
     margin-left: 30px;
 }
 
-#side-close-button
-{
+#side-close-button {
     display: block;
     position: fixed;
     width: 30px;
@@ -61,19 +56,16 @@ div.content.sidebar-off {
     cursor: pointer;
 }
 
-#side-close-button.sidebar-off
-{
+#side-close-button.sidebar-off {
     display: none;
     overflow: hidden;
 }
 
-#side-open-button
-{
+#side-open-button {
     display: none;
 }
 
-#side-open-button.sidebar-off
-{
+#side-open-button.sidebar-off {
     display: block;
     position: fixed;
     width: 30px;
@@ -116,7 +108,7 @@ div.content.sidebar-off {
 
 .blog {
     padding: 20px;
-    background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
 }
 
 .blog .medium-image {
@@ -129,16 +121,25 @@ div.content.sidebar-off {
     max-width: 900px;
 }
 
-div.content.noSideBar{
+.blog .ps-root .ps-algorithm {
+    border-top: 3px solid rgb(212, 212, 212);
+    border-bottom: 2px solid rgb(212, 212, 212);
+}
+
+.blog .ps-root .ps-algorithm.with-caption>.ps-line:first-child {
+    border-bottom: 2px solid rgb(212, 212, 212);
+}
+
+div.content.noSideBar {
     width: 100%;
     margin-left: 0px;
 }
 
-.blog .katex .base{
+.blog .katex .base {
     color: rgb(212, 212, 212);
 }
 
-.blog .katex .tag{
+.blog .katex .tag {
     color: rgb(212, 212, 212);
 }
 
