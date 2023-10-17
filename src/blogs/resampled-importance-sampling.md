@@ -12,7 +12,7 @@ $$
 
 ### RIS Random Process
 
-<pre id="quicksort" class="pseudocode">
+<pre class="pseudocode" lineNumber="true">
     % This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
     \begin{algorithm}
     \caption{Quicksort}
