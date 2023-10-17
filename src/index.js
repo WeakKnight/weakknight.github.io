@@ -163,6 +163,7 @@ BlogHelper.getBlogList().then((articles) => {
                 BlogHelper.getBlogContent(article.path).then((content) => {
                     try {
                         $("scroll-content").html(marked(content, { renderer: renderer }));
+                        pseudocode.renderClass("pseudocode");
                     }
                     catch (error) {
                         console.log(error);
