@@ -27,11 +27,11 @@ def FunctionToIntegrate(x):
     return math.sin(x) * math.cos(x) * x * x
 
 def TargetFunction(x):
-    return math.sin(x)
+    return math.sin(x) * math.cos(x) * x * x
 
 def ris(N, M):
     res = 0
-    for s in range(N):
+    for n in range(N):
         cdf = CDF()
         for i in range(0, M):
             pi = 1.0 # uniform rng
@@ -70,9 +70,15 @@ def testCDF():
             timer += 1
     print(timer)
 
-# referrence = integrate.quad(lambda x: FunctionToIntegrate(x), 0, 1.0)[0]
-# print(referrence)
+random.seed(42)
 
-# print(naive(100000))
+referrence = integrate.quad(lambda x: FunctionToIntegrate(x), 0, 1.0)[0]
+print("Reference Is " + str(referrence))
 
-# print(ris(1000, 32))
+naiveResult = naive(10000)
+naiveError = abs(naiveResult - referrence)
+print("Naive Error Is " + str(naiveError))
+
+risResult = ris(1000, 32)
+risError = abs(risResult - referrence)
+print("RIS Error Is " + str(risError))
