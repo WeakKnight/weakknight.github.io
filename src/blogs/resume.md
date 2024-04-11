@@ -49,14 +49,8 @@ ltyucb@gmail.com
 >*Path Tracer*, an unidirectional path tracer. <br/>
 >links: [Project Page](https://www.cs.utah.edu/~tianyuli/courses/cs6620/prj14.html)
 
-**Programming Languages:**   
-
->*C++*:  usually use C++ as C with class.
-
->*Javascript*:  React development for client app based on electron.
 ------
 ## Extra
-
 
 > Spoken Languages: Chinese (native speaker), English
 
