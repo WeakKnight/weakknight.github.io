@@ -38,16 +38,6 @@ ltyucb@gmail.com
 > Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) in TiMi-L1.
 <br/>
 > Developped Yarp, the in-house rendering pipeline in TiMi-L1.
-------
-## Technical Experience
-
-**Personal Projects:**   
-
->*Uber Moves*, a visualization tool for Uber pickups. <br/>
-> links: [Interactive Demo](https://ubermoves.github.io/UberMoves/app.html)
-
->*Path Tracer*, an unidirectional path tracer. <br/>
->links: [Project Page](https://www.cs.utah.edu/~tianyuli/courses/cs6620/prj14.html)
 
 ------
 ## Extra
