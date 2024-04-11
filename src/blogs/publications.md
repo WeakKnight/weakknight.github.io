@@ -2,7 +2,7 @@
 > Tianyu Li\*, Xiaoxin Guo\* (\*Joint first authors) <br/>
 > Eurographics 2024 <br/>
 > [Project Page](https://github.com/WeakKnight/real-time-seamless-object-space-shading) <br/>
-> <img src="https://github.com/WeakKnight/real-time-seamless-object-space-shading/blob/main/teaser.png?raw=true" width="60%" alt="oss"/>
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/publications/rsoss.png" width="60%" alt="oss"/>
 ------
 > **Practical High-Performance Rendering on Mobile Platforms** <br/>
 > Xiaoxin Guo, Tianyu Li <br/>
