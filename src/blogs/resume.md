@@ -33,7 +33,7 @@ ltyucb@gmail.com
 
 ## Work Experience
 > 2021-Now
-: **Graphics Engineer**, TiMi Studio, Tencent Games
+: **Graphics Engineer**, TiMi L1 Studio, Tencent Games
 <br/>
 > Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) in TiMi-L1.
 <br/>
