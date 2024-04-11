@@ -1,10 +1,6 @@
 {
     "articles": [
         {
-            "path":"resampled-importance-sampling.md",
-            "title":"Resampled Importance Sampling"
-        },
-        {
             "path":"error-estimation-of-monte-carlo.md",
             "title":"Error Estimation In Monte Carlo Methods"
         },
