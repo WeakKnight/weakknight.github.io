@@ -18,6 +18,10 @@ ltyucb@gmail.com
 ------
 
 ## Publication
+> **Real-time Seamless Object Space Shading** <br/>
+> Tianyu Li\*, Xiaoxin Guo\* (\*Joint first authors) <br/>
+> Eurographics Short Paper, 2024
+
 > **Virtual Blue Noise Lighting**<br/>
 > Tianyu Li\*, Wenyou Wang\*, Daqi Lin, Cem Yuksel (\*Joint first authors) <br/>
 > Proceedings of ACM on Computer Graphics and Interactive Techniques (Proceedings of HPG 2022) <br/>
@@ -32,8 +36,6 @@ ltyucb@gmail.com
 : **Graphics Engineer**, TiMi Studio, Tencent Games
 <br/>
 > Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) in TiMi-L1.
-<br/>
-> Developped rendering features about HDR Display.
 <br/>
 > Developped Yarp, the in-house rendering pipeline in TiMi-L1.
 ------
