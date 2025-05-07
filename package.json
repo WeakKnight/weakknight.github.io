@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
     "file-loader": "^5.0.2",
     "style-loader": "^1.1.2",
     "webpack": "^5.88.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
     "gl-now": "^1.4.0",

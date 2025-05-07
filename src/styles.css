@@ -164,6 +164,17 @@ div.content.noSideBar {
     margin-top: 8px;
 }
 
+.blog .scroll-content.arcade-mode {
+    width: 100%;
+    height: 100%;
+}
+
+.arcade-mode canvas
+{
+    width: 100%;
+    height: 100%;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

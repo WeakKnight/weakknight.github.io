@@ -32,6 +32,7 @@ const STATE_NONE = -1;
 const STATE_HOME = 0;
 const STATE_PUBLICATIONS = 1;
 const STATE_RESUME = 2;
+const STATE_WEBARCADE = 3
 
 let currentBlogPath = "";
 let currentBlogTitle = "";
@@ -72,6 +73,10 @@ let resume = () => {
     globalStateMahine.changeState(STATE_RESUME);
 }
 
+let arcade = ()=> {
+    globalStateMahine.changeState(STATE_WEBARCADE);
+}
+
 Scrollbar.init($("blog").element);
 
 let onChange = (previous, current) => {
@@ -86,6 +91,7 @@ let onChange = (previous, current) => {
         $("sidebar").disableClass("sidebar-off");
         $("content").disableClass("noSideBar");
         $("content").disableClass("miscs");
+        $("scroll-content").disableClass("arcade-mode");
 
         BlogHelper.getBlogContent(currentBlogPath).then((content) => {
             document.title = currentBlogTitle;
@@ -102,6 +108,7 @@ let onChange = (previous, current) => {
         $("sidebar").enableClass("sidebar-off");
         $("content").enableClass("noSideBar");
         $("content").enableClass("miscs");
+        $("scroll-content").disableClass("arcade-mode");
 
         if (current === STATE_RESUME) {
             BlogHelper.getBlogContent('resume.md').then((content) => {
@@ -113,12 +120,42 @@ let onChange = (previous, current) => {
                 $("scroll-content").html(marked(content, { renderer: renderer }));
             });
         }
+        else if (current === STATE_WEBARCADE)
+        {
+            $("scroll-content").enableClass("arcade-mode");
+            $("scroll-content").html(`
+            <canvas id="GLCanvas">
+            Your browser does not support the HTML5 canvas.
+            </canvas>
+           `)
+
+           function addScript(url) {
+                const script = document.createElement('script');
+                script.src = url;
+                script.type = 'text/javascript';
+                script.async = true; // 可选：异步加载脚本
+            
+                // 当脚本加载完成后运行
+                script.onload = function() {
+                    console.log(`${url} has been loaded successfully.`);
+                };
+            
+                script.onerror = function() {
+                    console.error(`Failed to load script from ${url}`);
+                };
+            
+                document.head.appendChild(script);
+            }
+        
+            // 调用函数并传入脚本的URL
+            addScript('index-DRiwn-vM.js');
+        }
     }
 };
 
 let sideBar = new SideBar(document.getElementById("side"), [], 0);
 let navBarItems = [
-    // ["Contact", contact], 
+    ["Arcade", arcade], 
     ["Resumé", resume],
     ["Publications", publications],
     ["Home", home]
