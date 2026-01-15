@@ -1,14 +1,27 @@
 .topnav {
     background-color: #373738;
-    overflow: hidden;
     width: 100%;
     position: fixed;
     top: 0px;
     z-index: 10000;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 6px;
+}
+
+.topnav-left,
+.topnav-right {
+    display: flex;
+    align-items: center;
+}
+
+.topnav-right {
+    margin-left: auto;
 }
 
 .topnav a {
-    float: right;
     color: #cccccc;
     text-align: center;
     padding: 14px 16px;
@@ -26,4 +39,47 @@
     background-color: #303030;
     text-decoration: none;
     color: #cccccc;
+}
+
+/* ===== Toggle Primary Side Bar 按钮 ===== */
+#toggle-sidebar-button {
+    width: 32px;
+    height: 32px;
+    margin: 0 8px 0 4px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: #2f2f30;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+#toggle-sidebar-button.hidden {
+    display: none;
+}
+
+#toggle-sidebar-button:hover {
+    background-color: #3a3a3a;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+#toggle-sidebar-button:active {
+    transform: scale(0.96);
+}
+
+.toggle-sidebar-icon {
+    width: 20px;
+    height: 20px;
+    fill: #cfcfcf;
+}
+
+@media (max-width: 768px) {
+    .topnav a {
+        padding: 14px 12px;
+        font-size: 14px;
+    }
 }

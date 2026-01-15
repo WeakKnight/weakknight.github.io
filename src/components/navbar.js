@@ -12,14 +12,38 @@ export default class NavBar {
 
         this.parent.appendChild(this.container);
 
-        // if (!navigator.userAgentData.mobile)
+        // 左侧容器（按钮 + 标题）
+        this.leftContainer = document.createElement('div');
+        this.leftContainer.classList.add('topnav-left');
+        this.container.appendChild(this.leftContainer);
+
+        // 右侧容器（菜单项）
+        this.rightContainer = document.createElement('div');
+        this.rightContainer.classList.add('topnav-right');
+        this.container.appendChild(this.rightContainer);
+
+        // Toggle Primary Side Bar 按钮（放在左侧）
+        this.toggleSidebarButton = document.createElement('button');
+        this.toggleSidebarButton.id = 'toggle-sidebar-button';
+        this.toggleSidebarButton.type = 'button';
+        this.toggleSidebarButton.title = 'Toggle Primary Side Bar';
+        this.toggleSidebarButton.setAttribute('aria-label', 'Toggle Primary Side Bar');
+        this.toggleSidebarButton.innerHTML = `
+            <svg class="toggle-sidebar-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="6" height="16" rx="1.5"></rect>
+                <rect x="10.5" y="6" width="10.5" height="2" rx="1"></rect>
+                <rect x="10.5" y="11" width="10.5" height="2" rx="1"></rect>
+                <rect x="10.5" y="16" width="10.5" height="2" rx="1"></rect>
+            </svg>`;
+        this.leftContainer.appendChild(this.toggleSidebarButton);
+
+        // 标题
         {
-                let title = document.createElement('a');
-                title.innerText = "Tianyu";
-                title.style.float = "left";
-                title.style.fontWeight = "bold"
-                title.href = "https://weakknight.github.io/";
-                this.container.appendChild(title);
+            let title = document.createElement('a');
+            title.innerText = "Tianyu";
+            title.style.fontWeight = "bold"
+            title.href = "https://weakknight.github.io/";
+            this.leftContainer.appendChild(title);
         }
 
         this.children = [];
@@ -48,7 +72,7 @@ export default class NavBar {
                 a.classList.add('active');
             }
 
-            this.container.appendChild(a);
+            this.rightContainer.appendChild(a);
         })
     }
 

@@ -35,51 +35,57 @@ div.content {
     overflow-y: auto;
 }
 
+/* 避免侧边栏与导航栏之间出现缝隙 */
+#side {
+    background-color: rgb(37, 37, 38);
+}
+
 div.content.sidebar-off {
-    width: calc(100% - 60px);
-    margin-left: 30px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-#side-close-button {
-    display: block;
-    position: fixed;
-    width: 30px;
-    height: 80px;
-    background-color: rgb(55, 55, 56);
-    left: 170px;
-    top: 50%;
-    opacity: 0.5;
-    text-align: center;
-    line-height: 80px;
-    font-size: 17px;
-    color: #cccccc;
-    cursor: pointer;
-}
 
-#side-close-button.sidebar-off {
+/* 遮罩层 */
+#sidebar-overlay {
     display: none;
-    overflow: hidden;
-}
-
-#side-open-button {
-    display: none;
-}
-
-#side-open-button.sidebar-off {
-    display: block;
     position: fixed;
-    width: 30px;
-    height: 80px;
-    background-color: rgb(55, 55, 56);
-    left: 0px;
-    top: 50%;
-    opacity: 0.5;
-    text-align: center;
-    line-height: 80px;
-    font-size: 17px;
-    color: #cccccc;
-    cursor: pointer;
-    overflow: hidden;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#sidebar-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+
+/* ===== 移动端响应式 ===== */
+@media (max-width: 768px) and (pointer: coarse) {
+    /* 隐藏桌面端按钮 */
+    #side-close-button,
+    #side-open-button {
+        display: none !important;
+    }
+    
+    /* 内容区全宽 */
+    div.content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    
+    div.content.sidebar-off {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
 }
 
 .blog p {
