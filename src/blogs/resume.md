@@ -38,6 +38,16 @@ ltyucb@gmail.com
 > Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) in TiMi-L1.
 <br/>
 > Developped Yarp, the in-house rendering pipeline in TiMi-L1.
+<br/>
+> Designed and built the rendering pipeline for the following shipped titles:
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/wz.png" width="80%" alt="Honor of Kings"/>
+
+> **Honor of Kings**
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/wxq.png" width="80%" alt="Honor of Kings: Chess"/>
+
+> **Honor of Kings: Chess**
 
 ------
 ## Extra
