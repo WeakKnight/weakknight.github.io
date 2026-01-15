@@ -112,6 +112,10 @@ div.content.sidebar-off {
     color: rgb(212, 212, 212);
 }
 
+.blog li {
+    color: rgb(212, 212, 212);
+}
+
 .blog {
     padding: 20px;
     background-color: rgb(30, 30, 30);
