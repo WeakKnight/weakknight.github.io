@@ -22,9 +22,13 @@ ltyucb@gmail.com
 > Tianyu Li\*, Xiaoxin Guo\* (\*Joint first authors) <br/>
 > Eurographics Short Paper, 2024
 
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/publications/rsoss.png" width="60%" alt="RSOSS"/>
+
 > **Virtual Blue Noise Lighting**<br/>
 > Tianyu Li\*, Wenyou Wang\*, Daqi Lin, Cem Yuksel (\*Joint first authors) <br/>
 > Proceedings of ACM on Computer Graphics and Interactive Techniques (Proceedings of HPG 2022) <br/>
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/publications/vbnl.png" width="60%" alt="VBNL"/>
 
 > **Virtual Lights with Blue Noise Distribution** <br/>
 > Tianyu Li, Wenyou Wang, Daqi Lin, Cem Yuksel <br/>
@@ -34,11 +38,17 @@ ltyucb@gmail.com
 ## Work Experience
 > 2021-Now
 : **Graphics Engineer**, TiMi L1 Studio, Tencent Games
-<br/>
-> Developped Messy Light, the in-house precomputed global illumination workflow(Baker + Runtime) in TiMi-L1.
-<br/>
-> Developped Yarp, the in-house rendering pipeline in TiMi-L1.
-<br/>
+
+> **Messy Light** - Led and initiated the in-house precomputed GI system (Baker + Runtime). Features GPU Adaptive Sampling and Mesh Colors based Radiance Caching.
+
+> **Yarp** - Core architect of the in-house rendering pipeline. Deep involvement in Direct & Indirect Lighting, e.g. Tiled Culling, Real-time Local Capture, Dynamic Baking.
+
+<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/frame_breakdown.gif" width="80%" alt="Frame Breakdown"/>
+
+> **[GDC 2023: Practical High-Performance Rendering on Mobile Platforms](https://github.com/WeakKnight/GDC23_PracticalMobileRendering)**
+> <br/>
+> Contributed to Direct Lighting, Diffuse GI, Specular Normalization, and Specular Occlusion.
+
 > Designed and built the rendering pipeline for the following shipped titles:
 
 <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/wz.png" width="80%" alt="Honor of Kings"/>
