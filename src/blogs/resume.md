@@ -28,7 +28,7 @@ ltyucb@gmail.com
 > Tianyu Li\*, Wenyou Wang\*, Daqi Lin, Cem Yuksel (\*Joint first authors) <br/>
 > Proceedings of ACM on Computer Graphics and Interactive Techniques (Proceedings of HPG 2022) <br/>
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/publications/vbnl.png" width="60%" alt="VBNL"/>
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/publications/vbnl.png" width="60%" alt="VBNL"/>
 
 > **Virtual Lights with Blue Noise Distribution** <br/>
 > Tianyu Li, Wenyou Wang, Daqi Lin, Cem Yuksel <br/>
@@ -41,7 +41,7 @@ ltyucb@gmail.com
 
 > **Messy Light** - Led and initiated the in-house precomputed GI system (Baker + Runtime). Features Dynamic Baking, GPU Adaptive Sampling, and Mesh Colors based Radiance Caching.
 
-> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/dynamic_baking.gif" width="60%" alt="Dynamic Baking"/>
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/baking.gif" width="60%" alt="Dynamic Baking"/>
 
 > **Yarp** - Core architect of the in-house rendering pipeline. Deep involvement in Direct & Indirect Lighting, e.g. Tiled Culling, Real-time Local Capture.
 
