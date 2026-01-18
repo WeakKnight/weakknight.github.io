@@ -22,7 +22,7 @@ ltyucb@gmail.com
 > Tianyu Li\*, Xiaoxin Guo\* (\*Joint first authors) <br/>
 > Eurographics Short Paper, 2024
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/publications/rsoss.png" width="60%" alt="RSOSS"/>
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/publications/rsoss.png" width="60%" alt="RSOSS"/>
 
 > **Virtual Blue Noise Lighting**<br/>
 > Tianyu Li\*, Wenyou Wang\*, Daqi Lin, Cem Yuksel (\*Joint first authors) <br/>
@@ -39,11 +39,13 @@ ltyucb@gmail.com
 > 2021-Now
 : **Graphics Engineer**, TiMi L1 Studio, Tencent Games
 
-> **Messy Light** - Led and initiated the in-house precomputed GI system (Baker + Runtime). Features GPU Adaptive Sampling and Mesh Colors based Radiance Caching.
+> **Messy Light** - Led and initiated the in-house precomputed GI system (Baker + Runtime). Features Dynamic Baking, GPU Adaptive Sampling, and Mesh Colors based Radiance Caching.
 
-> **Yarp** - Core architect of the in-house rendering pipeline. Deep involvement in Direct & Indirect Lighting, e.g. Tiled Culling, Real-time Local Capture, Dynamic Baking.
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/dynamic_baking.gif" width="60%" alt="Dynamic Baking"/>
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/frame_breakdown.gif" width="80%" alt="Frame Breakdown"/>
+> **Yarp** - Core architect of the in-house rendering pipeline. Deep involvement in Direct & Indirect Lighting, e.g. Tiled Culling, Real-time Local Capture.
+
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/frame_breakdown.gif" width="60%" alt="Frame Breakdown"/>
 
 > **[GDC 2023: Practical High-Performance Rendering on Mobile Platforms](https://github.com/WeakKnight/GDC23_PracticalMobileRendering)**
 > <br/>
@@ -51,11 +53,11 @@ ltyucb@gmail.com
 
 > Designed and built the rendering pipeline for the following shipped titles:
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/wz.png" width="80%" alt="Honor of Kings"/>
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/wz.png" width="60%" alt="Honor of Kings"/>
 
 > **Honor of Kings**
 
-<img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/wxq.png" width="80%" alt="Honor of Kings: Chess"/>
+> <img src="https://github.com/WeakKnight/weakknight.github.io/raw/master/assets/resume/wxq.png" width="60%" alt="Honor of Kings: Chess"/>
 
 > **Honor of Kings: Chess**
 
